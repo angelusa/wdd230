@@ -1,6 +1,6 @@
 
 html {
-    background-image: linear-gradient(to bottom, #d3c3b1,  #adaa92, #b4a4b3, #634a5f);
+    background-image: linear-gradient(to bottom, #f9f8f8,  #f9f8f8, #f9f9f8, #f9f9f8);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -20,29 +20,29 @@ body{
     margin: 0 auto;
     background-color: #eee;
     border-radius: 1.2em;
-    box-shadow: 0 3px 3px rgba(4, 5, 5, .4);
+    box-shadow: 0 3px 3px #a3a0a0
 }
 
 footer{
-    background-color: #3a3e52;
+    background-color: #393535;
     color: #fff;
     text-align: center;
     padding: .5em;
     border-radius: .8em;
-    text-shadow: 0 3px 3px rgba(194, 165, 231, 0.5);
+    text-shadow: 0 3px 3px rgba(9, 9, 9, 0.5);
     height: 90px;
     padding-top: 46px;
-    box-shadow: 0 3px 3px rgba(16, 17, 17, 0.4);
+    box-shadow: 0 3px 3px rgba(234, 242, 242, 0.4);
     font-size: 1em;;
 }
 
 header{
-    background-color: #3a3e52;
+    background-color: #393535;
     color: #fff;
     text-align: center;
     padding: .9em;
     border-radius: .8em;
-    text-shadow: 0 3px 3px rgba(4, 3, 3, .5);
+    text-shadow: 0 3px 3px rgba(9, 9, 9, 0.5);
     height: 150px;
     box-shadow: 0 3px 3px rgba(4, 5, 5, .4);
 
@@ -62,9 +62,9 @@ header nav{
 }
 header nav a{
     text-decoration: none;
-    color: #333; 
+    color: #333;
     padding: 10px; 
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
 }
@@ -88,7 +88,7 @@ main h3{
     text-align: center;
     color: #fff;
     padding: 15px 0 10px 0;
-    background-color: #3A3E52;
+    background-color: #393535;
     border: 2px;
     border-radius: 3px;
 }
@@ -98,9 +98,9 @@ main h3{
 }
 .card h3{
     text-align: center;
-    color: #fff;
+    color: #edf3ee;
     padding: 10px 0 10px 0;
-    background-color: #3A3E52;
+    background-color: #393535;
     border: 2px;
     border-radius: 3px;
 }
