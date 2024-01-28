@@ -20,3 +20,13 @@ main > section {
 section img {
     max-width: 400px;
 }
+
+@media only screen and (max-width: 600px){
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.show-menu {
+        display: block;
+    }
+}
