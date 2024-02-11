@@ -7,6 +7,7 @@
 
 /* Body styles */
 body {
+    height: 100vh;
     font-family: 'Andada Pro', serif;
     color: #333; /* Default text color */
 }
@@ -23,6 +24,111 @@ header h1 {
     font-family: 'PT Sans', sans-serif;
     margin-bottom: 10px;
 }
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: #adc7f1;
+    padding: 12px 20px;
+}
+
+.logo img{
+    width: 40px
+}
+.menu{
+    display: flex;
+}
+
+.menu li{
+    padding-left: 30px;
+}
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{
+    width: 100%;
+}
+.open-menu, .close-menu{
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{
+    display: none;
+}
+
+.hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/company2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hero-image .hero-text{
+    color: #fff;
+    text-align: center;
+}
+
+.hero-image .hero-text h2{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.hero-image .hero-text p{
+    font-size: 20px;
+}
+
+.hero-image .hero-button{
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: blue;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.hero-image .hero-button:hover{
+    background: #fff;
+    color: blue;
+}
+
 
 nav ul {
     list-style: none;
@@ -72,6 +178,87 @@ main {
 #cta a {
     color: #010101
 }
+
+.card {
+    padding: 0 0 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0 10px 0;
+    background-color: #333;
+    border: 2px;
+    border-radius: 3px;
+}
+
+.card p {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.event-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.event-card{
+    width: 65%;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 2px;
+}
+
+.weather-card{
+    width: 25%;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 2px;
+}
+
+.event-content, ul{
+    list-style: none;
+    padding: 16px;
+}
+
+.weather-content, ul{
+    list-style: none;
+    padding: 16px;
+}
+
+.weather-content img{
+    border-radius: 3px;
+    width: 60px;
+}
+
+.company-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.company-card{
+    width: 30%;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 2px;
+}
+
+.company-content img{
+    border-radius: 50%;
+    width: 150px;
+}
+
 #events ul {
     list-style: none;
     margin-top: 20px;
@@ -129,4 +316,63 @@ footer p a {
     nav li {
         margin: 10px 0;
     }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #adc7f1;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li{
+        margin-top: 40px;
+    }
+    .menu li a{
+        padding: 10px;
+    }
+    .open-menu, .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .event-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    }
+
+    .event-card{
+        width: 80%;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 20px;
+    }
+
+    .weather-card{
+        width: 80%;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 20px;
+    }
+    .company-card{
+    width: 95%;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
 }
