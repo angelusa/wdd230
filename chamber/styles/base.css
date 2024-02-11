@@ -49,7 +49,7 @@ header h1 {
 .menu li a{
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: #010101;
     text-align: center;
     transition: 0.5s ease-in-out;
     position: relative;
@@ -332,9 +332,11 @@ footer p a {
     }
     .menu li{
         margin-top: 40px;
+        color: #010101;
     }
     .menu li a{
         padding: 10px;
+        color: #010101;
     }
     .open-menu, .close-menu{
         display: block;
