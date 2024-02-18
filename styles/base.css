@@ -98,7 +98,7 @@ header ul li a {
 .nav-link {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #475569;
+    color: #010101;
 }
 
 .nav-link:hover {
@@ -292,10 +292,43 @@ footer p:last-of-type {
     height: 100%;
 }
 
+.hero-image-container {
+    position: relative;
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+}
 
+.hero-image {
+    width: 100%;
+    height: auto;
+}
 
+.hero-text {
+    position: absolute;
+    top: 20px; /* Adjust top position here */
+    left: 20px; /* Adjust left position here */
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: cursive;
+    z-index: 1;
+}
 
-  /* medium */
+@media only screen and (max-width: 768px) {
+    .hero-image-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 960px) {
+    .hero-text {
+        font-size: 18px;
+    }
+}
+
+/* medium */
 /* @media only screen and (min-width: 32.5em){
 
     .container {
