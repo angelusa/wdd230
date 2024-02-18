@@ -1,0 +1,6 @@
+/* Enable responsive behavior on the image */
+.hero img {
+    width: 100%; /* Set width to 100% */
+    height: auto; /* Set height to auto to maintain aspect ratio */
+}
+
