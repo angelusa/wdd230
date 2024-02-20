@@ -17,3 +17,5 @@ try {
 }
 
 document.querySelector("#year").textContent = currentDate.getFullYear();
+
+
