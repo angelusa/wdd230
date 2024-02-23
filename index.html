@@ -6,10 +6,10 @@
     <meta name="author" content="Ilisapeci Kaboa">
     <meta name="description" content="Assignment portal Ilisapeci Kaboa in WDD 230: Web Frontend Development at BYUI">
     <meta property="og:title" content="Ilisapeci Kaboa Assignment Portal">
-    <meta property="og:type" content="Assignment portal">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.ci.larkspur.ca.us/image.jpg">
     <meta property="og:url" content="https://angelusa.github.io/wdd230/">
-    <title>Ilisapeci Kaboa Assignment Portal</title>
+    <title>Ilisapeci Kaboa Assignment Portal - WDD 230 - Web Frontend Development</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -35,7 +35,7 @@
                             <a class="nav-link" href="chamber/">Chamber</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.churchofjesuschrist.org/study/scriptures ">Scripture</a>
+                            <a class="nav-link" href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
                         </li>
                     </ul>
                 </div>
@@ -75,11 +75,11 @@
                 <h3>Information</h3>
                 <p><a>Larkspur, CA</a></p>
                 <p><a>76F- Sunshine</a></p>
-                <p><a>Page Visit: 15</a></p>
+                <p id="pageVisit"><a>Page Visits: </a></p>
              </section>
         </main>
         <div id="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.872592282643!2d-122.54505412363149!3d37.9334068030056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808590835aaf2a01%3A0x45c2b1b9c49fe5c5!2s42%20Olive%20Ave%2C%20Larkspur%2C%20CA%2094939!5e0!3m2!1sen!2sus!4v1706429681757!5m2!1sen!2sus" width="1137" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1573.4271041177433!2d-122.54606263421157!3d37.93383625380797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808590835aaf2a01%3A0x45c2b1b9c49fe5c5!2s42%20Olive%20Ave%2C%20Larkspur%2C%20CA%2094939!5e0!3m2!1sen!2sus!4v1708669034278!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <footer>
             &copy;<span id="currentYear">2024</span> Ilisapeci Kaboa | Larkspur, CA | <a target="_blank" href="https://byui.edu/online">BYUI Online Learning</a>
@@ -88,6 +88,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/hamburger.js"></script>
+    <script>
+        // Step 4: Initialize the counter when the page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            // Step 3: Retrieve the counter value from localStorage
+            let pageVisits = localStorage.getItem("pageVisits");
+            
+            // Check if pageVisits exists in localStorage
+            if (pageVisits) {
+                // If exists, increment the counter
+                pageVisits++;
+            } else {
+                // If doesn't exist, set the counter to 1
+                pageVisits = 1;
+            }
+            
+            // Display the counter on the page
+            document.getElementById("pageVisit").innerHTML = "<a>Page Visits: " + pageVisits + "</a>";
+            
+            // Step 2: Write JavaScript code to increment the counter and store it in localStorage
+            localStorage.setItem("pageVisits", pageVisits);
+        });
+    </script>
     <script>
         WebFont.load({
             google: {
