@@ -1,21 +1,25 @@
-let currentDate = new Date();
+const currentDate = new Date();
 
-try {
-	let options = {
-		weekday: "long",
-		day: "numeric",
-		month: "short",
-		year: "numeric",
-	};
+const fullDate = new Intl.DateTimeFormat("en-UK", {
+	dateStyle: "full"
+}).format(currentDate);
+document.querySelector(".date").innerHTML = fullDate;
 
-	document.querySelector("#updated").textContent = ` Last Update: ${currentDate.toLocaleDateString(
-		"en-us",
-		options,
-	)} ${currentDate.toLocaleTimeString("en-US")}`;
-} catch (error) {
-	alert("Error displaying time udpate");
+const currentYear = currentDate.getFullYear();
+document.querySelector(".current-year").innerHTML = currentYear;
+
+const lastModified = document.lastModified;
+document.querySelector(".last-modified").innerHTML = lastModified;
+
+function toggleMenu() {
+	document.getElementById("primary-nav").classList.toggle("open");
+	document.getElementById("ham-btn").classList.toggle("open");
 }
 
-document.querySelector("#year").textContent = currentDate.getFullYear();
+const hamburgerButton = document.getElementById("ham-btn");
+hamburgerButton.onclick = toggleMenu;
 
-
+const banner = document.querySelector(".banner");
+if (currentDate.getDay() <= 2 && currentDate.getDay() > 0) {
+	banner.style.display = "block";
+}

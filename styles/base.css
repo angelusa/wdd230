@@ -1,3 +1,4 @@
+/* Reset and global styles */
 * {
     margin: 0;
     padding: 0;
@@ -142,7 +143,10 @@ header ul li a {
     .navbar {
         padding: 0;
     }
+    .navbar menu{
+        position:relative
 
+    }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -292,63 +296,71 @@ footer p:last-of-type {
     height: 100%;
 }
 
-.hero-image-container {
-    position: relative;
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.hero {
+    height: 500px; 
+    background: url('https://i.postimg.cc/YCV2QBJg/image.jpg') no-repeat center center; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .hero-content {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 10px #000;  
+  }
+  
+  .hero-content p {
+    font-size: 24px;
+    text-shadow: 2px 2px 10px #000;
+  }
+
+
+/* Styles for the hero section */
+/*.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set the height to 100% of viewport height */
+   /* overflow: hidden;*/
+
 
 .hero-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-text {
     position: absolute;
-    top: 20px; /* Adjust top position here */
-    left: 20px; /* Adjust left position here */
-    color: rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust text color for better visibility */
     font-size: 24px;
     font-weight: bold;
-    font-family: cursive;
     z-index: 1;
 }
 
-@media only screen and (max-width: 768px) {
-    .hero-image-container {
-        width: 100%;
-        max-width: 100%;
+/* Additional styles for header, main, footer, and other sections as needed */
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 300px; /* Adjust height for smaller screens */
     }
 }
-
-@media (max-width: 960px) {
-    .hero-text {
-        font-size: 18px;
-    }
-}
-
-/* medium */
-/* @media only screen and (min-width: 32.5em){
-
-    .container {
-        max-width:65%;
-    }
-
-    header img {
-        float: left;
-        max-width: 8em;
-        height: 150px;
-        border-radius: .4em;
-
-    }
-
-    header h1 {
-        font-size: 2.5em;
-        
-    }
-
-    main h2 {
-        font-size: 1.8em;
-    }
-} */

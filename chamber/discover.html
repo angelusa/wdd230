@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 230 Chamber of Commerce Project Home Page">
-    <title>California Chamber of Commerce | Home Page</title>
+    <meta name="description" content="WDD 230 Chamber of Commerce Project Discover Page">
+    <title>California Chamber of Commerce | Discover Page</title>
     <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
-    <div class="banner">🤝🏼 Come join us for the chamber meet and greet Wednesday at 9:00 p.m.</div>
+    <div class="banner">🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</div>
     <header>
         <div class="header-logo">
             <a href="index.html">
@@ -64,16 +64,18 @@
                 
             </a>
             <div>
-                
-               <h1>California Chamber of Commerce</h1>   
+                <h1>California</h1>
+                <h2>Chamber of Commerce</h2>   
             </div>
         </div>
         <button id="ham-btn"><span>&#9776;</span><span>X</span></button>
-        
         <div class="date"></div>
         <div class="social ">
             <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/facebook.png" alt="Facebook logo">
+            </a>
+            <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+                <img src="images/twitter.png" alt="Twitter logo">
             </a>
             <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/linkedin.png" alt="LinkedIn logo">
@@ -81,8 +83,8 @@
         </div>
         <nav>
             <ul id="primary-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="discover.html">Discover</a></li>
                 <li><a href="#">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Contact</a></li>
@@ -90,53 +92,146 @@
         </nav>
     </header>
     <main>
-        <div class="main-container">    
-            <div class="hero box">
+        <!-- <div>Number of Visits: <br><span class="visits"></span></div> -->
+        <div class="image-gallery">
+            <div>
+                <h3>California City</h3>
                 <picture>
-                    <source media="(min-width: 960px)" srcset="https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                    <source media="(min-width: 640px)" srcset="https://media.istockphoto.com/id/1442856171/photo/downtown-san-jose.jpg?s=612x612&w=0&k=20&c=y23whCNeh6nXA09aqVv1vrEeCsstm_EUETU315_X2-w=">
-                    <source media="(min-width: 425px)" srcset="https://media.istockphoto.com/id/1442856171/photo/downtown-san-jose.jpg?s=612x612&w=0&k=20&c=y23whCNeh6nXA09aqVv1vrEeCsstm_EUETU315_X2-w=">
-                   
-                    <img src="https://media.istockphoto.com/id/1442856171/photo/downtown-san-jose.jpg?s=712x612&w=0&k=20&c=y23whCNeh6nXA09aqVv1vrEeCsstm_EUETU315_X2-w=" alt="Hero image">
+                    <source
+                    media="(min-width: 640px)"
+                    srcset="https://via.placeholder.com/758x400?text=placeholder"
+                    data-src="images/California-city-medium.jpg">
+                    <source
+                    media="(min-width: 425px)"
+                    srcset="https://via.placeholder.com/415x274?text=placeholder"
+                    data-src="images/California-city-small.jpg">
+                    <source
+                    media="(min-width: 375px)"
+                    srcset="https://via.placeholder.com/365x200?text=placeholder"
+                    data-src="images/California-city-small-M.jpg">
+                    <source
+                    media="(min-width: 320px)"
+                    srcset="https://via.placeholder.com/310x180?text=placeholder"
+                    data-src="./images/California-city-small-S.jpg">
+                    <img 
+                    src="https://via.placeholder.com/1014x400?text=placeholder" 
+                    data-src="images/California-city-large.jpg"
+                    alt="California-city">
                 </picture>
-
-                <h3>Welcome to California!</h3>
-                <button class="join-btn" onclick="window.location.href='../chamber/join.html'">Join the Chamber</button>
-            </div>
-            <div class="event box">
-                <h3>Grand Opening</h3>
-                <img 
-                    src="images/office-buildings-svgrepo-com.svg" 
-                    alt="Office Logo"
-                    height="80">
-                <p>Join us fot the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a href="#">more info...</a></p>
-            </div>
-            <div class="weather box">
-                <h3>Weather</h3>
                 <p>
-                    <figure>
-                        <img src="image" alt="logo" class="weather-icon">
-                        <p><span class="temperature"></span> °C</p>
-                        <figcaption></figcaption>
-                    </figure>
-                    Wind Speed: <span class="wind-speed"></span> km/h<br>
-                    Wind Chill: <span class="wind-chill"></span> °C
+                    California, a melting pot of culture, innovation, and natural beauty, stands as a beacon of opportunity and diversity on the West Coast of the United States.</p>
             </div>
-            <div class="join box">
-                <button class="join-btn" onclick="window.location.href='../chamber/join.html'">Join Us!</button>
-                <p>Discover how to join the California Chamber of Commercer and how it will benefit your organization!</p>
-            </div>
-            <div class="news box">
-                <h3>News Release</h3>
+            <div>
+                <h3>California coast</h3>
+                <picture>
+                  
+                    <source
+                    media="(min-width: 640px)"
+                    srcset="https://via.placeholder.com/758x400?text=placeholder"
+                    data-src="images/California-medium.jpg">
+                    <source
+                    media="(min-width: 425px)"
+                    srcset="https://via.placeholder.com/415x240?text=placeholder"
+                    data-src="images/California-small-L.jpg">
+                    <source
+                    media="(min-width: 375px)"
+                    srcset="https://via.placeholder.com/365x200?text=placeholder"
+                    data-src="./images/California-small-S.jpg">
+                    
+                    <img 
+                    src="https://via.placeholder.com/1014x400?text=placeholder" 
+                    data-src="./images/California-Large.jpg" 
+                    alt="California Coastal beach">
+                </picture>
                 <p>
-                    Febraury 29 - Febraury 29 - LeBron James closing in on 40,000 career points: Will anyone else ever score that many?
-                    <br>
-                    <br>
-                    NHL trade deadline tracker: Analyzing Dallas Stars deal and others made before March 8
-                </p>
+                    The California Coastal beach stretches along the majestic Pacific Ocean, offering sandy shores and stunning vistas along the iconic coastline of the Golden State.</p>
             </div>
-            <div class="spotlights-container box"></div>
+            <div>
+                <h3>Mojoave Desert</h3>
+                <picture>
+              
+                    <source
+                    media="(min-width: 640px)"
+                    srcset="https://via.placeholder.com/758x400?text=placeholder"
+                    data-src="images/Mojoave-desert-medium.jpg">
+                    <source
+                    media="(min-width: 425px)"
+                    srcset="https://via.placeholder.com/415x240?text=placeholder"
+                    data-src="images/Mojoave-desert-small-L.jpg">
+                    <source
+                    media="(min-width: 375px)"
+                    srcset="https://via.placeholder.com/365x200?text=placeholder"
+                    data-src="images/Mojoave-desert-small-S.jpg">
+                    <img 
+                    src="https://via.placeholder.com/1014x400?text=placeholder" 
+                    data-src="./images/Mojoave-desert-Large.jpg" 
+                    alt="Mojoave desert">
+                </picture>
+                <p>
+                    It is a vast expanse of arid wilderness, the Mojave Desert sprawls across California, a symbolic landscape of solitude and harsh beauty</p>
+            </div>
+            <div>
+                <h3>Sierra Nevada</h3>
+                <picture>
+                    <source
+                    media="(min-width: 640px)"
+                    srcset="https://via.placeholder.com/758x400?text=placeholder"
+                    data-src="images/Sierra-Nevada-medium.jpg">
+                    <source
+                    media="(min-width: 425px)"
+                    srcset="https://via.placeholder.com/415x240?text=placeholder"
+                    data-src="images/Sierra-Nevada-small-L.jpg">
+                    <source
+                    media="(min-width: 375px)"
+                    srcset="https://via.placeholder.com/365x200?text=placeholder"
+                    data-src="images/Sierra-Nevada-small-M.jpg">
+                    <img 
+                    src="https://via.placeholder.com/1014x400?text=placeholder" 
+                    data-src="./images/Sierra-Nevada-Large'.jpg" 
+                    alt="Sierra Nevada">
+                </picture>
+                <p>
+                    The Sierra Nevada bridges California and Nevada, epitomizing rugged beauty and natural connectivity.</p>
+            </div>
+            <div>
+                <h3>Klamath Mountains</h3>
+                <picture>
+                    <source
+                    media="(min-width: 640px)"
+                    srcset="https://via.placeholder.com/758x400?text=placeholder"
+                    data-src="./images/Klamath-Mountains-medium.jpg">
+                    <source
+                    media="(min-width: 425px)"
+                    srcset="https://via.placeholder.com/415x240?text=placeholder"
+                    data-src="./images/Klamath-Mountains-small-L.jpg">
+                    <source
+                    media="(min-width: 375px)"
+                    srcset="https://via.placeholder.com/365x200?text=placeholder"
+                    data-src="./images/Klamath-Mountains-small-M.jpg">
+                    <source
+                    media="(min-width: 320px)"
+                    srcset="https://via.placeholder.com/310x180?text=placeholder"
+                    data-src="./images/Klamath-Mountains-small-M.jpg">
+                    <img 
+                    src="https://via.placeholder.com/1014x400?text=placeholder" 
+                    data-src="./images/Klamath-Mountains-Large.jpg" 
+                    alt="Klamath Mountains">
+                </picture>
+                <p>
+                    The Klamath Mountains region provides a diverse array of accommodations, from traditional lodges to international hotels, alongside numerous apartments and hostels, totaling 7,200 spaces across various categories, signifying a booming hospitality sector amidst its expanding landscape.</p>
+            </div>
         </div>
+        <section class="demographics">
+            <h2>Demographic Summary</h2>
+            <p><strong>Area:</strong> 423,970 km²</p>
+            <p><strong>Total Population:</strong>39,356,104</p>
+            <p><strong>Women:</strong>50.3%</p>
+            <p><strong>Men:</strong>49.7%</p>
+            <p><strong>Total Households:</strong> 13,315,822</p>
+            <p><strong>Average Household Size:</strong> 3.1</p>
+            <p><strong>Number of Businesses:</strong>4,250,000</p>
+            <h2>Number of Visits: <br><span class="visits"></span></h2>
+        </section>
     </main>
     <footer>
         <div class="footer-logo">
@@ -201,7 +296,7 @@
         </div>
     </footer>
     <script src="scripts/script.js"></script>
-    <script src="scripts/windchill.js"></script>
-    <script src="scripts/spotligth.js"></script>
+    <script src="scripts/lazy-loading.js"></script>
+    <script src="scripts/visit-count.js"></script>
 </body>
 </html>

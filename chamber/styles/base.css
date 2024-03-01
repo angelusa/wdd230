@@ -102,7 +102,6 @@ nav ul {
     cursor: pointer;
 }
 
-
 .mode::after {
     content: '';
     width: 20px;
@@ -180,7 +179,9 @@ footer p a {
 }
 
 /* Responsive styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px){
+    
+}
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -222,44 +223,100 @@ footer p a {
     #check:checked~.menu {
         right: 0;
     }
-}
+
+    .container {
+        display: block;
+    }
+
 
 /* Custom styles */
-.event-weather-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar takes 200px width, main content takes remaining space */
+    grid-gap: 20px; /* Gap between sidebar and main content */
 }
 
-.event-card,
-.weather-card {
-    width: 45%;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 10px;
+/* Styles for sidebar */
+.sidebar {
+    background-color: #f2f2f2;
     padding: 20px;
+    border-radius: 5px;
 }
 
-.company-spotlights {
-    text-align: center;
-    margin-top: 20px;
+.sidebar h2 {
+    margin-bottom: 10px;
 }
 
-.company-card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-.company-card {
-    width: 30%;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 10px;
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    color: blue;
+}
+
+/* Styles for main content */
+.main-content {
     padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	place-items: center;
+	justify-content: center;
+	font-family: Roboto, sans-serif;
+}
+
+main {
+	margin: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	width: 760px;
+	background-color: rgba(225, 225, 255, 0.2);
+}
+
+p {
+	margin: 1rem;
+	display: flex;
+}
+
+.label {
+	display: block;
+	width: 175px;
+	font-weight: 700;
+	color: navy;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.smaller {
+	font-size: smaller;
+}
+
+/* CSS for desktop view */
+@media screen and (min-width: 768px) {
+    .photo:hover {
+        transform: scale(1.1); /* Example effect: Scale the image */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
 }
