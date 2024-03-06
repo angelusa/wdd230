@@ -1,143 +1,72 @@
-/* Reset and global styles */
-* {
+:root {
+    --primary-color: #007bff;
+    --text-color: #333;
+    --error-color: red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-html {
-    background-image: linear-gradient(to bottom, #d3c3b1,  #adaa92, #b4a4b3, #634a5f);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-        
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: .9em;
-    border-radius: .8em;
-    text-shadow: 0 3px 3px rgba(4, 3, 3, .5);
-    height: 160px;
-    box-shadow: 0 3px 3px rgba(4, 5, 5, .4);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-logo img {
-    width: 90px;
-    height: 130px;
-    box-shadow: 0 3px 3px rgba(3, 3, 3, .4);
-    box-shadow: 5px 5px 10px black;
-    object-fit: fill;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-item {
-    margin-right: 20px;
-}
-
-.nav-link {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #010101;
-}
-
-.nav-link:hover {
-    color: #482ff7;
-}
-
-.nav-logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
-}
-
-/* Main Content Styles */
-main {
-    max-width: 600px;
+.container {
+    max-width: 960px;
     margin: 0 auto;
     padding: 20px;
 }
 
 form {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: calc(100% - 20px);
+}
+
+button {
+    background-color: var(--primary-color);
     color: #fff;
-    text-align: center;
-    padding: .5em;
-    border-radius: .8em;
-    text-shadow: 0 3px 3px rgba(194, 165, 231, 0.5);
-    height: 90px;
-    padding-top: 46px;
-    box-shadow: 0 3px 3px rgba(16, 17, 17, 0.4);
-    font-size: 1em;
+    cursor: pointer;
 }
 
-/* Additional styles for smaller screens */
-@media only screen and (max-width: 768px) {
-    header {
-        height: 90px;
-    }
+button:hover {
+    background-color: #0056b3;
+}
 
-    .nav-logo img {
-        width: 55px;
-        height: 65px;
-        box-shadow: 0 3px 3px rgba(3, 3, 3, .4);
-        box-shadow: 5px 5px 10px black;
-        object-fit: fill;
-        border-radius: 3px;
-    }
+#passwordMatchError {
+    color: var(--error-color);
+    display: none;
+}
 
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 8.6rem;
-        flex-direction: column;
-        background-color: #333;
-        width: 69%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-menu.active {
-        left: 66px;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    footer {
-        height: 100px !important;
+@media screen and (min-width: 768px) {
+    form {
+        width: 70%;
+        margin: 0 auto;
     }
 }
+
