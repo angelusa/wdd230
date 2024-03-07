@@ -397,11 +397,11 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: black;
 }
 
 footer {
-    background-color: #333;
+    background-color: #555;
     color: white;
     padding: 10px;
     text-align: center;
@@ -417,4 +417,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* styles.css */
+
+button[type="submit"] {
+    background-color: lightgreen;
+    padding: .8rem;
+    /* Add any other styles you want for the button */
 }
