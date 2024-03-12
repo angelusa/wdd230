@@ -1,15 +1,25 @@
 const baseURL = "https://angleusa.github.io/wdd230/";
 const linksURL = "https://angelusa.github.io/wdd230/data/links.json";
 
-async function getLinks() {
-  try {
+
+// links.js
+
+function displayLinks(data) {
+  const linksContainer = document.getElementById('cards');
+
+  data.links.forEach(lesson => {
+    // existing code for creating sections and links
+  });
+}
+ 
+try {
     const response = await fetch(linksURL);
     const data = await response.json();
     displayLinks(data);
   } catch (error) {
     console.error("Error fetching links:", error);
   }
-}
+
 
 function displayLinks(data) {
   const linksContainer = document.getElementById('cards');
@@ -44,3 +54,4 @@ function displayLinks(data) {
 }
 
 getLinks();
+
