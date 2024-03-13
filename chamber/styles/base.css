@@ -320,3 +320,16 @@ p {
         transition: transform 0.3s ease; /* Smooth transition */
     }
 }
+
+/* Grid View Styling */
+#members-container.grid .member img {
+    display: block;     /* Display image as a block-level element */
+    margin-left: auto;  /* Center horizontally */
+    margin-right: auto;
+    width: 80%;         /* Adjust image width as needed */
+  }
+  
+  /* List View Styling */
+  #members-container.list .member img {
+    text-align: center; /* Center within parent container */
+  }
