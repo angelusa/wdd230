@@ -7,10 +7,41 @@
 
 /* Base styles */
 body {
-    font-family: 'Andada Pro', serif;
+    font-family: 'Andada Pro', serif, Roboto, sans-serif; /* Merged font declarations */
     color: #333; /* Default text color */
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 
+main {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 760px;
+    background-color: rgba(225, 225, 255, 0.2);
+}
+
+p {
+    margin: 1rem;
+    display: flex;
+}
+
+.label {
+    display: block;
+    width: 175px;
+    font-weight: 700;
+    color: navy;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+/* Header styles */
 header {
     background-color: #adc7f1;
     color: #333;
@@ -35,7 +66,7 @@ nav ul {
 .menu {
     display: flex;
     margin-left: auto; /* Aligns menu items to the right */
-    color:lightblue;
+    color: lightblue;
 }
 
 .menu a {
@@ -86,12 +117,12 @@ nav ul {
     display: none;
 }
 
-.mode {
-    margin-left: auto;
-}
-
 .mode[type="checkbox"] {
     display: none;
+}
+
+.mode {
+    margin-left: auto;
 }
 
 .mode {
@@ -180,9 +211,7 @@ footer p a {
 }
 
 /* Responsive styles */
-@media screen and (max-width: 767px){
-    
-}
+@media screen and (max-width: 767px) {
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -228,7 +257,7 @@ footer p a {
     .container {
         display: block;
     }
-
+}
 
 /* Custom styles */
 .container {
@@ -271,47 +300,6 @@ footer p a {
     padding: 20px;
     border-radius: 5px;
     background-color: #fff;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	height: 100vh;
-	display: flex;
-	place-items: center;
-	justify-content: center;
-	font-family: Roboto, sans-serif;
-}
-
-main {
-	margin: 0;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 1rem;
-	width: 760px;
-	background-color: rgba(225, 225, 255, 0.2);
-}
-
-p {
-	margin: 1rem;
-	display: flex;
-}
-
-.label {
-	display: block;
-	width: 175px;
-	font-weight: 700;
-	color: navy;
-	text-align: right;
-	margin-right: 10px;
-}
-
-.smaller {
-	font-size: smaller;
 }
 
 /* CSS for desktop view */
