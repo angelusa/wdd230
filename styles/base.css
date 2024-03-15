@@ -357,6 +357,21 @@ footer p:last-of-type {
 
 }
 
+.weather-description {
+    display: flex;
+    align-items: center;
+}
+
+.weather-description img {
+    margin-right: 10px; /* Adjust as needed to control the spacing between icon and description */
+}
+
+
+
+#weather-icon{
+    display: flex;
+    align-items: center;
+}
 
 
 /* Additional styles for header, main, footer, and other sections as needed */

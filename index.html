@@ -72,13 +72,20 @@
                 <li>Lesson 09: <a href="https://angelusa.github.io/wdd230/lesson09/new-ward-members.json">json</a></li>
                 <li>Lesson 09: <a href="https://angelusa.github.io/wdd230/lesson09/prophets.html">Prophets</a></li>
                 <li>Lesson 10: <a href="https://angelusa.github.io/wdd230/lesson10/weather.html">Weather</a></li>
+               
             </ul>
             <section class="card">
                 <h3>Information</h3>
                 <p><a>Larkspur, CA</a></p>
-                <p><a>76F- Sunshine</a></p>
-                <p id="pageVisit"><a>Page Visits: </a></p>
-             </section>
+                <p>Temperature: <span id="weather-temperature">--</span> °F</p>
+                <p>Description: <span id="weather-description">--</span> <img id="weather-icon" src="" alt="Weather Icon"></p>
+                <p>Visit Count: <span id="pageVisit">--</span></p>
+            </section>
+            
+            
+            
+            
+        
         </main>
         <div id="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.872592282643!2d-122.54505412363147!3d37.933406803005596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808590835aaf2a01%3A0x45c2b1b9c49fe5c5!2s42%20Olive%20Ave%2C%20Larkspur%2C%20CA%2094939!5e0!3m2!1sen!2sus!4v1708671042704!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -88,33 +95,10 @@
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/hamburger.js"></script>
+    <script src="script/getdates.js"></script>
+    <script src="script/hamburger.js"></script>
     <script src="script/links.js"></script>
-  
-
-    <script>
-        // Step 4: Initialize the counter when the page loads
-        document.addEventListener("DOMContentLoaded", function() {
-            // Step 3: Retrieve the counter value from localStorage
-            let pageVisits = localStorage.getItem("pageVisits");
-            
-            // Check if pageVisits exists in localStorage
-            if (pageVisits) {
-                // If exists, increment the counter
-                pageVisits++;
-            } else {
-                // If doesn't exist, set the counter to 1
-                pageVisits = 1;
-            }
-            
-            // Display the counter on the page
-            document.getElementById("pageVisit").innerHTML = "<a>Page Visits: " + pageVisits + "</a>";
-            
-            // Step 2: Write JavaScript code to increment the counter and store it in localStorage
-            localStorage.setItem("pageVisits", pageVisits);
-        });
-    </script>
+    <script src="script/weather.js"></script>
     <script>
         WebFont.load({
             google: {
@@ -122,10 +106,6 @@
             }
         });
     </script>
-
-    <script src="script/links.js"></script>
-    <script src="script/getdates.js"></script>
-    <script src="script/hamburger.js"></script>
-    
 </body>
 </html>
+
