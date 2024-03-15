@@ -63,9 +63,10 @@
   }
   
   .header-logo {
-    grid-column: 1/5;
+    grid-column: 1/6;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     font-family: 'Ubuntu', sans-serif;
     width: 80%;
     border-radius: 10px;
@@ -82,9 +83,9 @@
   
   .header-logo img {
     max-width: 180px;
-    margin: 1.5rem;
+    margin: 0 1rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 60%;
+    width: 80%;
   }
   
   .header-logo div {
@@ -120,12 +121,13 @@
   }
   
   .date {
-    grid-column: 2/6;
+    grid-column: 1/6;
     font-size: 1.3em;
     margin: 4px;
     padding: 4px;
     color: white;
     font-family: 'Ubuntu', sans-serif;
+    text-align: center;
   }
   
   .social {
@@ -774,3 +776,4 @@
 #members-container.list .member img {
   text-align: center; /* Center within parent container */
 }
+

@@ -35,6 +35,7 @@ nav ul {
 .menu {
     display: flex;
     margin-left: auto; /* Aligns menu items to the right */
+    color:lightblue;
 }
 
 .menu a {
