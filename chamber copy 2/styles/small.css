@@ -25,14 +25,27 @@
   }
   
   .banner {
-    display: none;
-    margin: 0 auto;
-    color: var(--dark-text-color);
-    background-color: var(--secondary-dark-color);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: block; /* Change display to block or flex to show the banner */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffcc;
+    color: #333;
+    padding: 10px;
     text-align: center;
-    padding: 0.8rem;
-    width: 100%;  
+    z-index: 9999;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: red;
   }
   
   /* HEADER */
