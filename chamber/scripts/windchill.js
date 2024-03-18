@@ -1,58 +1,6 @@
-function windChillCalc() {
-  const temperatureF = parseFloat(
-    document.querySelector(".temperature").textContent
-  );
-  const windSpeedMph = parseFloat(
-    document.querySelector(".wind-speed").textContent
-  );
-
-  const windChill = document.querySelector(".wind-chill");
-  const chillValue = windChillF(temperatureF, windSpeedMph);
-  
-  // Check if wind chill value is not "N/A" before updating
-  if (chillValue !== "N/A") {
-    windChill.textContent = `${Math.round(chillValue)} °F`; // Round wind chill to whole number and add "°F"
-  } else {
-    windChill.textContent = chillValue; // Set wind chill to "N/A"
-  }
-
-  // Display the banner only on Mondays, Tuesdays, and Wednesdays
-  const currentDate = new Date();
-  const currentDay = currentDate.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  const banner = document.querySelector('.banner');
-
-  if (currentDay >= 1 && currentDay <= 3) {
-    // Show the banner
-    banner.style.display = 'block';
-
-    // Add specific invitation text for Wednesday
-    if (currentDay === 3) { // Wednesday
-      banner.innerHTML = "Join us for a chamber of commerce meet and greet on Wednesday at 7:00 pm!";
-    } else {
-      // Remove the banner content for other days
-      banner.innerHTML = "";
-    }
-  } else {
-    // Hide the banner on other days
-    banner.style.display = 'none';
-  }
-}
-
-function windChillF(temperatureF, windSpeedMph) {
-  let windChillF;
-  if (temperatureF <= 50 && windSpeedMph > 3) {
-    const t = temperatureF;
-    const s = windSpeedMph ** 0.16;
-    windChillF = 35.74 + 0.6215 * t - 35.75 * s + 0.4275 * t * s;
-  } else {
-    windChillF = "N/A";
-  }
-  return windChillF;
-}
-
 async function apiFetch() {
   try {
-    const apiKey = "3e12af623e602c597021ee4d65741e25";
+    const apiKey = "3e12af623e602c597021ee4d65741e25"; // Your OpenWeatherMap API key
     const town = "Larkspur";
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${apiKey}&units=imperial`;
@@ -73,36 +21,47 @@ function displayResults(weatherData) {
   const temperature = document.querySelector(".temperature");
   const windSpeed = document.querySelector(".wind-speed");
   const weatherIcon = document.querySelector(".weather-icon");
-  const captionDesc = document.querySelector(".weather-description");
+  const captionDesc = document.querySelector(".weather-description"); // Select weather description element
+  const windChill = document.querySelector(".wind-chill"); // Select wind chill element
 
-  temperature.textContent = `${Math.round(weatherData.main.temp)}°F`; // Round temperature to whole number
-  windSpeed.textContent = `${weatherData.wind.speed.toFixed(1)} mph`; // Display wind speed in mph
+  temperature.textContent = `${Math.round(weatherData.main.temp)}°F`;
+  windSpeed.textContent = `${weatherData.wind.speed.toFixed(1)} mph`;
 
   const iconSrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
   const desc = weatherData.weather[0].description;
 
   weatherIcon.setAttribute("src", iconSrc);
   weatherIcon.setAttribute("alt", desc);
-  captionDesc.textContent = capitalizeStr(desc); // Display weather description
+  
+  if (captionDesc) { // Check if captionDesc element exists
+    captionDesc.textContent = capitalizeStr(desc);
+  }
 
-  windChillCalc(); // Calculate and display wind chill
+  windChillCalc(weatherData.main.temp, weatherData.wind.speed);
 }
 
 function capitalize(word) {
-  const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
-  return capitalized;
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 function capitalizeStr(string) {
-  let capitalized;
-  if (string.includes(" ")) {
-    let split = string.split(" ");
-    split = split.map((word) => capitalize(word));
-    capitalized = split.join(" ");
-  } else {
-    capitalized = capitalize(string);
+  const words = string.split(" ");
+  const capitalizedWords = words.map(word => capitalize(word));
+  return capitalizedWords.join(" ");
+}
+
+function windChillCalc(temperatureF, windSpeedMph) {
+  let windChillF;
+  const t = temperatureF;
+  const s = windSpeedMph;
+  windChillF = 35.74 + (0.6215 * t) - (35.75 * Math.pow(s, 0.16)) + (0.4275 * t * Math.pow(s, 0.16));
+  windChillF = Math.round(windChillF);
+  console.log("Wind chill:", windChillF);
+  
+  const windChillElement = document.querySelector(".wind-chill");
+  if (windChillElement) { // Check if windChillElement exists
+    windChillElement.textContent = windChillF;
   }
-  return capitalized;
 }
 
 apiFetch();
