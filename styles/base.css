@@ -346,8 +346,8 @@ footer p:last-of-type {
 
 .hero-text {
     position: absolute;
-    top: 28%;
-    left: 35%;
+    top: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
     color: black; /* Adjust text color for better visibility */
@@ -381,6 +381,8 @@ footer p:last-of-type {
     .hero {
         height: 300px; /* Adjust height for smaller screens */
     }
+    .hero-text {
+        top: 20px; /* Adjust the top position for mobile */
+        left: 20px; /* Adjust the left position for mobile */
 }
-
-
+}
