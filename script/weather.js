@@ -10,13 +10,13 @@ function fetchWeather() {
         .then(data => {
             // Extract required weather information
             const temperatureCelsius = data.main.temp;
-            const temperatureFahrenheit = (temperatureCelsius * 9/5) + 32; // Convert Celsius to Fahrenheit
+            const temperatureFahrenheit = Math.round((temperatureCelsius * 9/5) + 32); // Convert Celsius to Fahrenheit and round to whole number
             const description = data.weather[0].description;
             const iconCode = data.weather[0].icon;
             const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
 
             // Update HTML content with weather information
-            document.getElementById('weather-temperature').textContent = `${temperatureFahrenheit.toFixed(1)} °F`; // Display temperature in Fahrenheit
+            document.getElementById('weather-temperature').textContent = `${temperatureFahrenheit} °F`; // Display temperature in Fahrenheit rounded to whole number
             document.getElementById('weather-description').textContent = description;
             document.getElementById('weather-icon').setAttribute('src', iconUrl);
 
@@ -49,3 +49,4 @@ function updatePageVisitCount() {
 
 // Call fetchWeather function when the page loads
 window.addEventListener('load', fetchWeather);
+
