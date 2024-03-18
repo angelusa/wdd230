@@ -11,7 +11,7 @@ function windChillCalc() {
   
   // Check if wind chill value is not "N/A" before updating
   if (chillValue !== "N/A") {
-    windChill.textContent = chillValue; // Remove "°F" here
+    windChill.textContent = `${Math.round(chillValue)} °F`; // Round wind chill to whole number and add "°F"
   } else {
     windChill.textContent = chillValue; // Set wind chill to "N/A"
   }
@@ -44,7 +44,6 @@ function windChillF(temperatureF, windSpeedMph) {
     const t = temperatureF;
     const s = windSpeedMph ** 0.16;
     windChillF = 35.74 + 0.6215 * t - 35.75 * s + 0.4275 * t * s;
-    windChillF = windChillF.toFixed(1);
   } else {
     windChillF = "N/A";
   }
@@ -76,8 +75,8 @@ function displayResults(weatherData) {
   const weatherIcon = document.querySelector(".weather-icon");
   const captionDesc = document.querySelector(".weather-description");
 
-  temperature.innerHTML = `${weatherData.main.temp.toFixed(1)}°F`; // Display temperature in Fahrenheit
-  windSpeed.innerHTML = `${weatherData.wind.speed.toFixed(1)} mph`; // Display wind speed in mph
+  temperature.textContent = `${Math.round(weatherData.main.temp)}°F`; // Round temperature to whole number
+  windSpeed.textContent = `${weatherData.wind.speed.toFixed(1)} mph`; // Display wind speed in mph
 
   const iconSrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
   const desc = weatherData.weather[0].description;
