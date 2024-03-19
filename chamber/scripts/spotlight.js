@@ -5,7 +5,7 @@ const companies = [
     phone: "+1 (213) 555-7890",
     email: "info@logistics-transport.com",
     url: "https://logistics-transport.com",
-    img: "images/transport-logo.webp", // Corrected image path
+    img: "images/transport2.webp", // Corrected image path
     slogan: "Making moving easier in America",
     membership: "gold",
   },
