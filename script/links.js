@@ -1,4 +1,5 @@
-const baseURL = "https://angelusa.github.io/wdd230/copy/data/links.json";
+const baseURL = "https://angelusa.github.io/wdd230/data/links.json";
+
 
 async function getLinks(baseURL) {
   const response = await fetch(baseURL);
