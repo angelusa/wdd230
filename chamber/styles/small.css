@@ -30,7 +30,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #ffffcc;
+  background-color: lightyellow;
   color: #333;
   padding: 10px;
   text-align: center;
@@ -67,7 +67,7 @@ header {
   justify-items: center;
   margin: 0 auto;
   /* max-width: 1024px; */
-  color: white;
+  color: whitesmoke;
   background-color: var(--primary-dark-color);
   /* border: 1px solid rgba(255, 255, 255, 0.3); */
   text-align: center;
@@ -130,7 +130,7 @@ header button {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 4px;
   background-color: #FFFFFF;
-  color: black; 
+  color: black;
 }
 
 .date {
@@ -138,7 +138,7 @@ header button {
   font-size: 1.3em;
   margin: 4px;
   padding: 4px;
-  color: white;
+  color: whitesmoke;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
 }
@@ -197,7 +197,7 @@ nav ul {
 
 nav ul li a {
 display: block;
-color: #FFFFFF;
+color: white;
 text-align: center;
 padding: 0.70rem;
 text-decoration: none;
@@ -215,7 +215,7 @@ nav ul li a:focus {
 
 /* Color HOME */
 .active a {
-  color: white;
+  color: whitesmoke;
   border: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: bold;
   font-family: 'Ubuntu', sans-serif;
@@ -790,4 +790,71 @@ width: 80%;         /* Adjust image width as needed */
 /* List View Styling */
 #members-container.list .member img {
 text-align: center; /* Center within parent container */
+}
+
+.container {
+  display: flex;
+}
+
+.container .sidebar {
+  flex: 1; /* Sidebar takes up 1 part of the available space */
+  background-color: var(--primary-dark-color);
+  color: var(--light-text-color);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-box {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: darkgrey; /* Adjust background color as needed */
+  border-radius: 1px;
+  max-width: fit-content;
+
+ 
+}
+.sidebar-box img{
+  max-width: 12em;
+  text-align: center;
+  
+
+}
+.sidebar-box h3 {
+  color: black; /* Text color for box headings */
+ 
+}
+
+.sidebar-box p {
+  color: black; /* Text color for box content */
+  text-align: left;
+  
+
+}
+
+.container .main {
+  flex: 3; /* Main content takes up 3 parts of the available space */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-gallery figure {
+  margin-bottom: 20px;
+}
+
+.photo-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.photo-gallery figcaption {
+  font-style: italic;
+  color: #777;
 }
