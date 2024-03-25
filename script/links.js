@@ -1,43 +1,23 @@
-const baseURL = "https://angleusa.github.io/wdd230/";
-const linksURL = "https://angleusa.github.io/wdd230/data/links.json";
+const baseURL = "https://angelusa.github.io/wdd230/data/links.json";
 
-async function getLinks() {
-    try {
-      const response = await fetch(linksURL);
-      const data = await response.json();
-      displayLinks(data);
-    } catch (error) {
-      console.error("Error fetching links data:", error);
-    }
-  }
+
+async function getLinks(baseURL) {
+  const response = await fetch(baseURL);
+  const data = await response.json();
+  console.log(data)
+  renderLink(data.lessons)
+}
+
+function linkTemplate(data) {
+    
+  const link1 = data.links[0] || {};
+  const link2 = data.links[1] || {};
+  return `<li>lesson ${data.lesson}:<a href="${link1.url || ''}">${link1.title || ''}</a> | <a href="${link2.url || ''}">${link2.title || ''}</a></li>`;
+}
+function renderLink(data) {
+  const htmlItems = data.map(linkTemplate); // Map each lesson data to HTML
+  const selector = document.getElementById("activityList");
   
-  function displayLinks(data) {
-    const linksContainer = document.getElementById("cards");
-  
-    data.forEach(week => {
-      const weekDiv = document.createElement("div");
-      weekDiv.classList.add("week");
-  
-      const weekHeader = document.createElement("h2");
-      weekHeader.textContent = `Week ${week.week}`;
-      weekDiv.appendChild(weekHeader);
-  
-      const linksList = document.createElement("ul");
-  
-      week.links.forEach(link => {
-        const linkItem = document.createElement("li");
-        const linkAnchor = document.createElement("a");
-        linkAnchor.textContent = link.title;
-        linkAnchor.href = baseURL + link.url;
-  
-        linkItem.appendChild(linkAnchor);
-        linksList.appendChild(linkItem);
-      });
-  
-      weekDiv.appendChild(linksList);
-      linksContainer.appendChild(weekDiv);
-    });
-  }
-  
-  getLinks();
-  
+ selector.innerHTML = htmlItems.join(""); // Join HTML items and render into the specified DOM element
+}
+getLinks(baseURL);
