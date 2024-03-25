@@ -1,0 +1,66 @@
+{
+    "lessons": [
+      {
+        "lesson": "02",
+        "links": [
+          {
+            "url": "lesson02/media-query.html",
+            "title": "Media Queries"
+          },
+          {
+            "url": "lesson02/design-principles.html",
+            "title": "Design Principles Document"
+          }
+        ]
+      },
+      {
+        "lesson": "03",
+        "links": [
+          {
+            "url": "lesson03/chamber-site-plan.html",
+            "title": "Chamber"
+          },
+          {
+            "url": "lesson03/design.html",
+            "title": "Design"
+          },
+          {
+            "url": "lesson03/typography.html",
+            "title": "Typography"
+          }
+        ]
+      },
+      {
+        "lesson": "05",
+        "links": [
+          {
+            "url": "lesson05/bom.html",
+            "title": "Book Of Mormon"
+          },
+          {
+            "url": "lesson05/lazyload.html",
+            "title": "Lazy"
+          }
+        ]
+      },
+      {
+        "lesson": "06",
+        "links": [
+          {
+            "url": "lesson06/responsive-images.html",
+            "title": "Images"
+          }
+        ]
+      },
+      {
+        "lesson": "09",
+        "links": [
+          {
+            "url": "lesson09/prophets.html",
+            "title": "Latter-Day Prophets"
+          }
+        ]
+      }
+    ]
+  }
+  

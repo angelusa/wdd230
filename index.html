@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ilisapeci Kaboa-WDD230-Web Frontend Development">
+    <meta name="description" content="WDD230-Web Frontend Development -Ilisapeci Kaboa-Course Assignment Portal">
+    <meta name="author" content="Ilisapeci Kaboa">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.ci.larkspur.ca.us/image.jpg">
+    <meta property="og:url" content="https://angelusa.github.io/wdd230/">
+    <title>Ilisapeci Kaboa Assignment Portal - WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <img class="image" src="images/ili.webp" alt="me">
+                </div>
+                <div class= "e">
+                    <h1>Ilisapeci Kaboa</h1>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lesson03/chamber-site-plan.html">Site Plan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="chamber/">Chamber</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="hero-image-container">
+                <picture>
+                    <img src="images/hero-large.webp" alt="Favorite Latter-day Temple" class="hero-image">
+                </picture>
+              
+                <div class="hero-text">Oakland Temple</div>
+            </div>
+            
+            <h2>WDD 230: Web Frontend Development</h2>
+            <h3>Learning activities</h3>
+            <ul id="activitylist">
+                
+            </ul>
+            <section class="card">
+                <h3>Information</h3>
+                <p><a>Larkspur, CA</a></p>
+                <p>Temperature: <span id="weather-temperature">--</span></p>
+                <p>Description: <span id="weather-description">--</span> <img id="weather-icon" src="placeholder.png" alt="Weather Icon"></p>
+                <p>Visit Count: <span id="pageVisit">--</span></p>
+            </section>
+            
+            
+            
+            
+        
+        </main>
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.872592282643!2d-122.54505412363147!3d37.933406803005596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808590835aaf2a01%3A0x45c2b1b9c49fe5c5!2s42%20Olive%20Ave%2C%20Larkspur%2C%20CA%2094939!5e0!3m2!1sen!2sus!4v1708671042704!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <footer>
+            &copy;<span id="currentYear">2024</span> Ilisapeci Kaboa | Larkspur, CA | <a target="_blank" href="https://byui.edu/online">BYUI Online Learning</a>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="script/getdates.js"></script>
+    <script src="script/hamburger.js"></script>
+    <script src="script/links.js"></script>
+    <script src="script/weather.js"></script>
+    
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Montserrat:300,400,700']
+            }
+        });
+    </script>
+</body>
+</html>
+

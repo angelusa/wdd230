@@ -1,0 +1,45 @@
+/* Dark Mode Styles */
+.dark-mode body {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .menu li a {
+    color: #fff;
+}
+
+.dark-mode .menu li a::after {
+    background-color: #fff;
+}
+
+.dark-mode .hero-text {
+    color: #fff;
+}
+
+.dark-mode .hero-button {
+    background: #333;
+    color: #fff;
+}
+
+.dark-mode .hero-button:hover {
+    background: #fff;
+    color: #333;
+}
+
+.dark-mode .event-card,
+.dark-mode .weather-card,
+.dark-mode .company-card {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode .footer {
+    background-color: #222;
+    color: #fff;
+}
+
