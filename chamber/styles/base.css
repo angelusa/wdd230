@@ -295,6 +295,103 @@ footer p a {
     color: blue;
 }
 
+* styles/members.css */
+.main-directory {
+  margin-top: 10px;
+  margin-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.0rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  text-align: center;
+  background-color: #999;
+}
+
+.buttons {
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.main-directory .main-patners {
+  margin: 10px;
+  background-color: #4a9a34;
+  box-shadow: 10px 10px 50px #4a9a34;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+.patners-img img {
+  background-color: whitesmoke;
+}
+
+.main-directory .main-patners p, 
+.main-directory .main-patners h3 {
+  text-align: center;
+}
+
+.new-date,
+menu {
+  min-width: 320px;
+  width: 100%;
+}
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 90%;
+  gap: 20px;
+
+}
+
+.list .main-patners {
+  display: flex;
+  flex-direction: column;
+  background-color: #999;
+  border: #333D29 1px solid;
+  padding-bottom: 20px;
+}
+
+
+
+.list .main-patners .line {
+  display: none;
+}
+
+
+.list .main-patners .patners-img {
+  display: none;
+}
+
+
+
+.patners-img img {
+  background-color: whitesmoke;
+
+
+
+}
+
+.list .main-patners p {
+  text-align: left;
+  font-size: .8rem;
+
+}
+
+.list .main-patners h3 {
+  text-align: left;
+  font-size: .8rem;
+
+}
+
 /* Styles for main content */
 .main-content {
     padding: 20px;

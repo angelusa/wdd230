@@ -1,5 +1,5 @@
 :root {
-  --primary-dark-color:#6B818C;
+  --primary-dark-color: #6B818C;
   --secondary-dark-color: #6B818C;
   --accent-dark-color-1: #465281;
   --accent-dark-color-2: #131314;
@@ -10,10 +10,13 @@
   --paragraph-font: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4, h5 { font-family: 'Ubuntu', sans-serif; }
-section, p, li, a, input, option, select, label, legend { font-family: 'Montserrat', sans-serif; }
+h1, h2, h3, h4, h5, header button { 
+  font-family: var(--header-font); 
+}
 
-
+section, p, li, a, input, option, select, label, legend, .box h3, .box p, .event h3, .event a, .event p, .weather figure p, .news p, .spotlight h3, .spotlight p, .join-container h2, .join-container h3, .join-container h4, .join-form h2, .directory-grid section h3, .directory-list section h3, .contact-container h2, .contact-container h3, .sidebar-box h3, .sidebar-box p, .photo-gallery figcaption {
+  font-family: var(--paragraph-font); 
+}
 
 * {
   box-sizing: border-box;
@@ -857,4 +860,116 @@ text-align: center; /* Center within parent container */
 .photo-gallery figcaption {
   font-style: italic;
   color: #777;
+}
+
+
+
+
+/*discovery*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	margin: 0 auto;
+	padding: 0.5rem;
+	max-width: 1024x;
+	background-color: #fff;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #bed;
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #eee;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-family: "Caveat", cursive;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+	background-color: #bed;
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section p {
+	font-weight: 600;
+	font-size: smaller;
+}
+
+section a {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 0.85rem;
+	color: navy;
+	letter-spacing: 1.1pt;
+}
+
+img {
+	height: 75px;
+	max-width: 100%; /* Images are jerks - Seattle*/
 }
