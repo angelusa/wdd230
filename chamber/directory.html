@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,17 @@
     <meta name="description" content="Directory of Members Page">
     <title>Directory of Members</title>
     <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-   
+
 </head>
-<body>
-    
+
+<body id="directory">
+
     <header>
         <div class="header-logo">
             <a href="index.html">
@@ -34,33 +37,30 @@
                 <img src="images/linkedin.webp" alt="LinkedIn logo">
             </a>
         </div>
-        
+
         <nav>
             <ul id="primary-nav">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li class="active"><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-               
             </ul>
         </nav>
-    
     </header>
-
     <main>
         <div class="menu">
-            <button id="grid">⏹️Grid</button>
-            <button id="list">📄List</button>
+            <button onclick="toggleVisibility('grid')">⏹️Grid</button>
+            <button onclick="toggleVisibility('list')">📄List</button>
         </div>
         <hr>
         <article class="grid">
             <section>
-                <img src= "https://angelusa.github.io/wdd230/chamber/images/BioTech-Inno.webp"  alt=BioTech />
+                <img src="https://angelusa.github.io/wdd230/chamber/images/BioTech-Inno.webp" alt=BioTech />
                 <h3>BioTech</h3>
                 <p>2015</p>
                 <a href="https://biotechinnovationsag.com" target="_blank">Details</a>
             </section>
-    
+
             <section>
                 <img src="https://angelusa.github.io/wdd230/chamber/images/EcoEnergize.webp" alt="EcoEnergize" />
                 <h3>EcoEnergize</h3>
@@ -68,42 +68,60 @@
                 <a href="https://www.ecoenergize.com" target="_blank">Details
                 </a>
             </section>
-    
+
             <section>
                 <img src="https://angelusa.github.io/wdd230/chamber/images/Foodie_ventures.webp" alt="Foodventures" />
                 <h3>Food Ventures</h3>
                 <p>2019</p>
                 <a href="https://www.foodieventures.com" target="_blank">Details </a>
             </section>
-    
+
             <section>
                 <img src="https://angelusa.github.io/wdd230/chamber/images/techSS.webp" alt="TechSavy" />
                 <h3>TechSavvy Solution</h3>
                 <p>1998</p>
                 <a href="https://www.techsavvysolutions.com" target="_blank">Details</a>
             </section>
-    
+
             <section>
                 <img src="https://angelusa.github.io/wdd230/chamber/images/Traveljunct.webp" alt="Travel Junction" />
                 <h3>Travel Junction</h3>
                 <p>1997</p>
                 <a href="https://www.traveljunction.com" target="_blank">Details</a>
             </section>
-    
+
             <section>
                 <img src="https://angelusa.github.io/wdd230/chamber/images/Artistry_studio.webp" alt="Artistry" />
                 <h3>Artistry Studio</h3>
                 <p>1981</p>
                 <a href="https://www.artistrystudio.com" target="_blank">Details</a>
             </section>
-    
+
             <section>
-                <img src="https://angelusa.github.io/wdd230/chamber/images/Fit_Fusion.webp"  alt= "Fit Fusion" />
+                <img src="https://angelusa.github.io/wdd230/chamber/images/Fit_Fusion.webp" alt="Fit Fusion" />
                 <h3>Fit Fusion</h3>
                 <p>2015</p>
                 <a href="https://www.fitfusion.com" target="_blank">Details</a>
             </section>
         </article>
+        <section class="list">
+            <table id="memberTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Level</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+                <tbody id="memberData">
+                    <!-- Member data will be inserted here -->
+                </tbody>
+            </table>
+
+        </section>
+
     </main>
 
     <footer>
@@ -115,16 +133,52 @@
             <p>+1 (619) 555-4321</p>
         </div>
         <div class="web-info">
-            &copy;<span class="current-year">2024</span> California Chamber | <strong>illsapeci Kaboa</strong> | WDD 230 Project | <br>
+            &copy;<span class="current-year">2024</span> California Chamber | <strong>illsapeci Kaboa</strong> | WDD 230
+            Project | <br>
             Last Updated: <span class="last-modified"></span>
         </div>
     </footer>
-    
-    <script src="scripts/script.js"></script>
-    <script src="scripts/members.js"></script>
-    
 
-    
-    
+    <script src="scripts/script.js"></script>
+    <script>
+        async function fetchAndDisplayMembers() {
+            try {
+                const response = await fetch('data/members.json');
+                const data = await response.json();
+
+                const memberDataContainer = document.getElementById('memberData');
+
+                data.companies.forEach(member => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                <td>${member.name}</td>
+                <td>${member.phone}</td>
+                <td>${member.address}</td>
+                <td>${member.membership_level}</td>
+                <td><a href="${member.website}" target="_blank">Details</a></td>
+            `;
+                    memberDataContainer.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching member data:', error);
+            }
+        }
+
+        fetchAndDisplayMembers();
+
+        function toggleVisibility(section) {
+            var gridSection = document.querySelector('.grid');
+            var listSection = document.querySelector('#memberTable');
+
+            if (section === 'list') {
+                listSection.style.display = 'block';
+                gridSection.style.display = 'none';
+            } else if (section === 'grid') {
+                listSection.style.display = 'none';
+                gridSection.style.display = 'grid';
+            }
+        }
+    </script>
 </body>
+
 </html>

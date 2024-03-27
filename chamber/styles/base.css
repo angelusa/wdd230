@@ -59,6 +59,7 @@ nav ul {
     padding: 12px 20px;
 }
 
+
 .logo img {
     width: 40px;
 }
@@ -68,6 +69,7 @@ nav ul {
     margin-left: auto; /* Aligns menu items to the right */
     color: lightblue;
 }
+
 
 .menu a {
     text-decoration: none;
@@ -193,9 +195,9 @@ nav ul {
 }
 
 /* Main styles */
-main {
+/* main {
     padding: 20px;
-}
+} */
 
 /* Footer styles */
 footer {
@@ -309,11 +311,6 @@ footer p a {
   flex-direction: column;
 }
 
-.menu {
-  text-align: center;
-  background-color: #999;
-}
-
 .buttons {
   font-size: 40px;
   margin-left: 10px;
@@ -337,10 +334,6 @@ footer p a {
 }
 
 .new-date,
-menu {
-  min-width: 320px;
-  width: 100%;
-}
 
 
 .list {

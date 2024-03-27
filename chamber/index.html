@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,18 @@
     <meta property="og:title" content="California Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.ci.larkspur.ca.us/image.jpg">
-    <meta property="og:url" content="https://angelusa.github.io/wdd230/">
+    <!-- <meta property="og:url" content="https://angelusa.github.io/wdd230/"> -->
     <title>California Chamber of Commerce | Home Page</title>
     <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom.css">    
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
     <div class="banner">
         <span class="close-btn"></span>
@@ -34,7 +38,7 @@
             </div>
         </div>
         <button id="ham-btn"><span>&#9776;</span><span>X</span></button>
-        
+
         <div class="date"></div>
         <div class="social">
             <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -50,55 +54,60 @@
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-              
+
             </ul>
         </nav>
     </header>
     <main>
-        <div class="main-container">    
+        <div class="main-container" id="index">
             <div class="hero box">
                 <picture>
-                   <img src="images/Bridge.webp" alt="hero">
+                    <img src="images/Bridge.webp" alt="hero">
                 </picture>
-                <form action="join.html"><button class="call-to-action" type="submit">Join the Chamber</button></form> <!-- Remove this line -->
+                <form action="join.html"><button class="call-to-action" type="submit">Join the Chamber</button></form>
             </div>
-            
+
             <div class="event box">
                 <h3>Grand Opening</h3>
                 <img src="images/transport2.webp" alt="Transport Logo" height="80">
-                <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a href="#">more info...</a></p>
+                <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a
+                        href="#">more info...</a></p>
             </div>
             <div class="event box">
                 <h3>Grand Opening</h3>
                 <img src="images/lawyer-logo.webp" alt="Lawyer Logo" height="80">
-                <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a href="#">more info...</a></p>
+                <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a
+                        href="#">more info...</a></p>
             </div>
             <div class="event box">
                 <h3>Grand Opening</h3>
                 <img src="images/office-buildings-svgrepo-com.webp" alt="Marketing Logo" height="80">
-                <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a href="#">more info...</a></p>
+                <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m <a
+                        href="#">more info...</a></p>
             </div>
             <div class="weather box">
                 <h3>Weather</h3>
                 <p>
-                    <figure>
-                        <img src="image" alt="logo" class="weather-icon">
-                        <p><span class="temperature"></span></p> <!-- Temperature displayed here -->
-                        <figcaption></figcaption>
-                    </figure>
-                    Wind Speed: <span class="wind-speed">3.0</span><br> <!-- Example wind speed value -->
-                    Wind Chill: <span class="wind-chill"></span>
+                <figure>
+                    <img src="images/office-logo.webp" alt="logo" class="weather-icon">
+                    <p><span class="temperature"></span></p> <!-- Temperature displayed here -->
+                    <figcaption></figcaption>
+                </figure>
+                Wind Speed: <span class="wind-speed">3.0</span><br> <!-- Example wind speed value -->
+                Wind Chill: <span class="wind-chill"></span>
                 </p>
-                
+
             </div>
             <div class="join box">
                 <button class="join-btn" onclick="window.location.href='../chamber/join.html'">Join Us!</button>
-                <p>Discover how to join the California Chamber of Commerce and how it will benefit your organization!</p>
+                <p>Discover how to join the California Chamber of Commerce and how it will benefit your organization!
+                </p>
             </div>
             <div class="news box">
                 <h3>News Release</h3>
                 <p>
-                    February 29 - LeBron James closing in on 40,000 career points: Will anyone else ever score that many?
+                    February 29 - LeBron James closing in on 40,000 career points: Will anyone else ever score that
+                    many?
                     <br>
                     <br>
                     NHL trade deadline tracker: Analyzing Dallas Stars deal and others made before March 8
@@ -113,7 +122,8 @@
             <p>+1 (619) 555-4321</p>
         </div>
         <div class="web-info">
-            &copy;<span class="current-year"></span> California Chamber | <strong>Ilisapeci Kaboa</strong> | WDD 230 Project | <br>
+            &copy;<span class="current-year"></span> California Chamber | <strong>Ilisapeci Kaboa</strong> | WDD 230
+            Project | <br>
             Last Updated: <span class="last-modified"></span>
         </div>
     </footer>
@@ -122,4 +132,5 @@
     <script src="scripts/spotlight.js"></script>
     <script src="scripts/banner.js"></script>
 </body>
+
 </html>

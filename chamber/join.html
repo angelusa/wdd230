@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,26 +13,29 @@
     <meta property="og:url" content="https://angelusa.github.io/wdd230/">
     <title>California Chamber of Commerce | Join</title>
     <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
-   
-        <header>
+
+    <header>
         <div class="header-logo">
             <a href="index.html">
                 <img src="images/logo.webp" alt="California Chamber of Commerce Logo">
             </a>
             <div>
-                
-               <h1>California Chamber of Commerce</h1>   
+
+                <h1>California Chamber of Commerce</h1>
             </div>
         </div>
         <button id="ham-btn"><span>&#9776;</span><span>X</span></button>
-        
+
         <div class="date"></div>
         <div class="social ">
             <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -43,15 +47,15 @@
         </div>
         <nav>
             <ul id="primary-nav">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="https://angelusa.github.io/wdd230/chamber/directory.html">Directory</a></li>
-                <li><a href="https://angelusa.github.io/wdd230/chamber/joint.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="active"><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <main>
+        <main class="main-join">
             <form action="thankyou.html" method="get">
                 <div class="form-row">
                     <label for="firstName">First Name:</label>
@@ -89,28 +93,30 @@
                 </div>
             </form>
         </main>
-    
+
     </main>
     <footer>
         <div class="footer-logo">
             <a href="#">
             </a>
             <h5>California Chamber of Commerce 401 Nansen.California, United States</h5>
-           
-            
+
+
         </div>
         <div class="contact-info">
             <p>Californiachamber@commerce.com.us</p>
             <p>+1 (619) 555-4321</p>
-            
+
         </div>
         <div class="web-info">
-            &copy;<span class="current-year"></span> California Chamber | <strong>illsapeci Kaboa</strong> | WDD 230 Project | <br>
+            &copy;<span class="current-year"></span> California Chamber | <strong>illsapeci Kaboa</strong> | WDD 230
+            Project | <br>
             Last Updated: <span class="last-modified"></span>
         </div>
     </footer>
     <script src="scripts/script.js"></script>
     <script src="scripts/windchill.js"></script>
-    <script src="scripts/spotligth.js"></script>
+    <script src="scripts/spotlight.js"></script>
 </body>
+
 </html>

@@ -75,8 +75,8 @@ function populateSpotlightCompanies() {
 
 function displaySpotlightCompanies() {
   const container = document.querySelector(".spotlights-container");
-  container.innerHTML = ""; // Clear the container before adding new items
-
+  container.innerHTML = ""; 
+  
   const filtered = spotlightCompanies.sort(() => Math.random() - 0.5).slice(3);
   filtered.forEach((company) => {
     displaySpotlight(company);

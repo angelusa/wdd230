@@ -1,0 +1,119 @@
+.main-join form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#directory .menu {
+    justify-content: center;
+    display: flex;
+    background-color: #bed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#directory .menu button {
+    width: 80px;
+    height: 45px;
+    margin-left: 5px;
+}
+
+#directory .grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#directory .grid section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#directory .grid section img {
+    width: 70%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #333;
+}
+
+#directory .grid section h3 {
+    margin-top: 10px;
+    font-family: "Caveat", cursive;
+
+}
+
+#directory section #memberTable {
+    display: none;
+
+}
+
+#memberTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#memberTable th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#memberTable th {
+    background-color: #f2f2f2;
+}
+
+/* Alternating row colors */
+#memberTable tr:nth-child(even) {
+    background-color: #bed; /* Light grey */
+}
+
+#memberTable tr:nth-child(odd) {
+    background-color: #ccc; /* Dark grey */
+}
+
+
+
+#index .hero {
+    position: relative;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#index .hero .call-to-action {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #3498db;
+    color: #3498db;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+}
+
+#index .button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#index .button:active {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+#index .button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

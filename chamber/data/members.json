@@ -64,14 +64,12 @@
             
         {
 
-
             "name": "FitFusion",
             "address": "234 Fitness Street, FitCity, CA 98765",
             "phone": "+1 (650) 456-7890",
             "website": "https://www.fitfusion.com",
             "image": "Fit_Fusion.webp",
-            "membership_level": "Silver"
-           
+            "membership_level": "Silver"           
         }    
         
 
