@@ -1,2 +1,2 @@
-# Sister Ili's example site
-## Example site
+# Sister Ili's Page Example
+## WDD 230
