@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilisapeci Kaboa - WDD 230 - Web Frontend Development</title>
+  <meta name="description" content="Ilisapeci Kaboa's course assignment portal for WDD 230 - Web Frontend Development. Learning Activities and Information">
+  <meta name="author" content="Ilisapeci Kaboa">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+  <header>
+    <img src="images/ili.jpg" alt="Ilisapeci Kaboa">
+    <span>Ilisapeci Kaboa</span>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Site Plan</a></li>
+      <li><a href="#">Form</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>WDD 230: Web Frontend Development</h1>
+    <section class="card">
+      <h2>Learning Activities</h2>
+      <ul>
+        <li><a href="#">Activity 1</a></li>
+        <li><a href="#">Activity 2</a></li>
+        <li><a href="#">Activity 3</a></li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Information</h2>
+      <p>Weather information placeholder.</p>
+      <p>Number of visits placeholder.</p>
+    </section>
+  </main>
+  <footer>
+    &copy;<span id="currentYear">2024</span> Ilisapeci Kaboa | Larkspur, CA |
+    <p id="lastModified"></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+  </script>
+</body>
+</html>
