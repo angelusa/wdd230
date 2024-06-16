@@ -5,13 +5,25 @@ body {
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    margin: 1rem;
   }
   
   header {
     display: flex;
     align-items: center;
     padding: 1rem;
-    background-color: #e57ed0;
+    background-color: #4CAF50;
     color: white;
   }
   
@@ -52,17 +64,19 @@ body {
   }
   
   main {
-    display: grid;
-    gap: 1rem;
     padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  }
+  
+  main h1 {
+    margin-bottom: 1rem;
+    text-align: center;
   }
   
   .card {
     padding: 1rem;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
+    margin-bottom: 1rem;
   }
   
   ul {
@@ -72,7 +86,7 @@ body {
   
   footer {
     padding: 1rem;
-    background-color: #e57ed0;
+    background-color: #4CAF50;
     text-align: center;
     color: white;
   }
@@ -87,10 +101,17 @@ body {
     }
   
     main {
-      grid-template-columns: 2fr 1fr;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
-    .card:first-child {
+    .card {
+      width: 80%;
+      max-width: 800px;
+    }
+  
+    .card:nth-child(2) {
       grid-column: span 2;
     }
   }
