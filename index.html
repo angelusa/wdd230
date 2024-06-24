@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Ilisapeci Kaboa - WDD230 - Web Frontend Development">
+  <meta property="og:title" content="Ilisapeci Kaboa-WDD230-Web Frontend Development">
   <meta name="description" content="Ilisapeci Kaboa's course assignment portal for WDD 230 - Web Frontend Development. Learning Activities and Information">
   <meta name="author" content="Ilisapeci Kaboa">
   <meta property="og:type" content="website">
@@ -22,13 +22,15 @@
     <header>
       <img src="images/ili.jpg" alt="Ilisapeci Kaboa">
       <span>Ilisapeci Kaboa</span>
+      <button id="dark-mode-toggle">🌙 Dark Mode</button>
     </header>
     <nav>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Chamber</a></li>
-        <li><a href="#">Site Plan</a></li>
-        <li><a href="#">Form</a></li>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="site-plan.html">Site Plan</a></li>
+        <li><a href="form.html">Form</a></li>
       </ul>
     </nav>
     <main>
@@ -37,8 +39,8 @@
         <h2>Learning Activities</h2>
         <ul>
           <li><a href="https://codepen.io/angleusa/pen/mdYLgaq" target="_blank">Week 2 - Responsive Menu</a></li>
-          <li><a href="#">Activity 2</a></li>
-          <li><a href="#">Activity 3</a></li>
+          <li><a href="activity2.html">Activity 2</a></li>
+          <li><a href="activity3.html">Activity 3</a></li>
         </ul>
       </section>
       <section class="card">
@@ -53,5 +55,7 @@
     </footer>
   </div>
   <script src="scripts/getDates.js"></script>
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/darkMode.js"></script>
 </body>
 </html>

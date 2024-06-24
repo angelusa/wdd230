@@ -115,4 +115,63 @@ body {
       grid-column: span 2;
     }
   }
-  
+ 
+  /*Hamburger*/
+/* Add this to your base.css or a new CSS file */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  nav ul {
+    display: flex;
+  }
+}
+
+/*darkMode*/
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+header.dark-mode {
+  background-color: #1e1e1e;
+}
+
+nav.dark-mode {
+  background-color: #1e1e1e;
+}
+
+footer.dark-mode {
+  background-color: #1e1e1e;
+}
+
+button#dark-mode-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: auto;
+}
