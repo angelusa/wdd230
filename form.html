@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Ilisapeci Kaboa-WDD230-Web Frontend Development">
+  <meta name="description" content="Ilisapeci Kaboa's course assignment portal for WDD 230 - Web Frontend Development. Learning Activities and Information">
+  <meta name="author" content="Ilisapeci Kaboa">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.ci.larkspur.ca.us/image.jpg">
+  <meta property="og:url" content="https://angelusa.github.io/wdd230/">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Ilisapeci Kaboa - WDD230 Web Frontend Development</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="images/ili.webp" alt="Ilisapeci Kaboa">
+      <span>Ilisapeci Kaboa</span>
+      <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </header>
+    <nav>
+      <button  id="hamburger">&#9776;</button>
+      <ul id="nav-menu">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="site-plan.html">Site Plan</a></li>
+        <li><a href="form.html" class="active">Form</a></li>
+      </ul>
+    </nav>
+    <main>
+        <form id="signupForm" method="get" action="record.html">
+          <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="passwordMatchError">Passwords do not match. Please try again.</span>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="A valid byui.edu email address.">
+          </div>
+          <div class="rating-container">
+            <label for="pageRating">Page Rating:</label>
+            <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1" oninput="ratingOutput.value = pageRating.value">
+            <output id="ratingOutput">5</output>
+        </div>
+        
+          <button type="submit">Submit</button>
+        </form>
+      </main>
+   
+   
+    <footer>
+      &copy;<span id="year"></span> Ilisapeci Kaboa | Larkspur, CA |
+      <p id="lastModified"></p>
+    </footer>
+  </div>
+  <script src="scripts/getDates.js"></script>
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/darkMode.js"></script>
+  <script src="scripts/formvalidation.js"></script>
+</body>
+</html>
