@@ -8,4 +8,3 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "https://angelusa.github.io/wdd230/chamber/thankyou.html";
     });
 });
-
