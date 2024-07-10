@@ -1,0 +1,60 @@
+{
+	"companies": [
+		{
+			"name": "TechSavvy Solutions",
+			"address": "555 Innovation Drive, Silicon Valley, CA 95014",
+			"phone": "+1 (408) 123-4567",
+			"website": "https://www.techsavvysolutions.com",
+			"image": "techSS.webp",
+			"membership_level": "Platinum"
+		},
+		{
+			"name": "EcoEnergize",
+			"address": "123 Green Street, EcoCity, CA 98765",
+			"phone": "+1 (415) 987-6543",
+			"website": "https://www.ecoenergize.com",
+			"image": "EcoEnergize.webp",
+			"membership_level": "Gold"
+		},
+		{
+			"name": "Foodie Ventures",
+			"address": "789 Culinary Avenue, Foodtown, CA 54321",
+			"phone": "+1 (650) 321-0987",
+			"website": "https://www.foodieventures.com",
+			"image": "Foodie_ventures.webp",
+			"membership_level": "Silver"
+		},
+		{
+			"name": "BioTech Innovations",
+			"address": "321 Biotech Boulevard, BioCity, CA 12345",
+			"phone": "+1 (510) 876-5432",
+			"website": "https://www.biotechinnovations.com",
+			"image": "BioTech-Inno.webp",
+			"membership_level": "Bronze"
+		},
+		{
+			"name": "TravelJunction",
+			"address": "777 Wanderlust Lane, Travelville, CA 67890",
+			"phone": "+1 (408) 234-5678",
+			"website": "https://www.traveljunction.com",
+			"image": "Traveljunct.webp",
+			"membership_level": "Gold"
+		},
+		{
+			"name": "Artistry Studio",
+			"address": "456 Creative Avenue, Artropolis, CA 54321",
+			"phone": "+1 (415) 345-6789",
+			"website": "https://www.artistrystudio.com",
+			"image": "Artistry_studio.webp",
+			"membership_level": "Platinum"
+		},
+		{
+			"name": "FitFusion",
+			"address": "234 Fitness Street, FitCity, CA 98765",
+			"phone": "+1 (650) 456-7890",
+			"website": "https://www.fitfusion.com",
+			"image": "Fit_Fusion.webp",
+			"membership_level": "Silver"
+		}
+	]
+}
