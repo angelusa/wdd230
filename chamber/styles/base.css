@@ -930,7 +930,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Center and style buttons */
@@ -982,13 +982,13 @@ body {
 /* Grid View */
 .grid-view {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Each box is now min 300px */
     gap: 20px;
 }
 
 .grid-view .member {
     background-color: #f2f2f2;
-    padding: 10px;
+    padding: 20px; /* Increased padding for better spacing */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -996,8 +996,34 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-    max-width: 100%;
+    text-align: center; /* Center content inside the box */
+    max-height: 500px; /* Increased height to accommodate more content */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.grid-view .member .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word; /* Ensure long words break to fit within the box */
+}
+
+.grid-view .member .info h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.grid-view .member .info p,
+.grid-view .member .info a {
+    margin: 5px 0;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%; /* Ensures the text does not overflow the box */
 }
 
 /* List View */
@@ -1030,6 +1056,9 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+
 
 
 
