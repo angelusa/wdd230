@@ -1,76 +1,89 @@
 {
-    "weeks": [
-      {
-        "week": "Week 2",
-        "links": [
-          {
-            "url": "https://codepen.io/angleusa/pen/mdYLgaq",
-            "title": "Responsive Menu"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/chamber/index.html",
-            "title": "Chamber"
-          }
-        ]
-      },
-      {
-        "week": "Week 3",
-        "links": [
-          {
-            "url": "week03/images/landscape.webp",
-            "title": "WebP"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/week03/lazyload.html",
-            "title": "Lazy Load"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/week03/bom-copy/index.html",
-            "title": "Book Of Mormon"
-          }
-        ]
-      },
-      {
-        "week": "Week 4",
-        "links": [
-          {
-            "url": "https://codepen.io/angelusa/pen/QWXWBVR",
-            "title": "Pseudo-Class Fun"
-          },
-          {
-            "url": "week04/images/css-combinators.webp",
-            "title": "css combinators"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/week04/tablebuild.html",
-            "title": "Tables for Data Presentation"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/Form-start/index.html",
-            "title": "Form Start"
-          }
-        ]
-      },
-      {
-        "week": "Week 5",
-        "links": [
-          {
-            "url": "https://codepen.io/angelusa/pen/MWMYGVj",
-            "title": "Pseudo-Elements"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/week05/new-ward-members.json",
-            "title": "Json"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/week05/weather.html",
-            "title": "Consuming a Weather API"
-          },
-          {
-            "url": "https://angelusa.github.io/wdd230/week05/prophets.html",
-            "title": "Prophets"
-          }
-        ]
-      }
-    ]
-  }
+  "weeks": [
+    {
+      "week": "Week 1",
+      "links": [
+        {
+          "url": "https://angelusa.github.io/wdd230/week01/holygrail.html",
+          "title": "Grail"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week01/mediaquery.html",
+          "title": "Media Query"
+        }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "links": [
+        {
+          "url": "https://codepen.io/angleusa/pen/mdYLgaq",
+          "title": "Responsive Menu"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/chamber/index.html",
+          "title": "Chamber"
+        }
+      ]
+    },
+    {
+      "week": "Week 3",
+      "links": [
+        {
+          "url": "week03/images/landscape.webp",
+          "title": "WebP"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week03/lazyload.html",
+          "title": "Lazy Load"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week03/bom-copy/index.html",
+          "title": "Book Of Mormon"
+        }
+      ]
+    },
+    {
+      "week": "Week 4",
+      "links": [
+        {
+          "url": "https://codepen.io/angelusa/pen/QWXWBVR",
+          "title": "Pseudo-Class Fun"
+        },
+        {
+          "url": "week04/images/css-combinators.webp",
+          "title": "css combinators"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week04/tablebuild.html",
+          "title": "Tables for Data Presentation"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/Form-start/index.html",
+          "title": "Form Start"
+        }
+      ]
+    },
+    {
+      "week": "Week 5",
+      "links": [
+        {
+          "url": "https://codepen.io/angelusa/pen/MWMYGVj",
+          "title": "Pseudo-Elements"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week05/new-ward-members.json",
+          "title": "Json"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week05/weather.html",
+          "title": "Consuming a Weather API"
+        },
+        {
+          "url": "https://angelusa.github.io/wdd230/week05/prophets.html",
+          "title": "Prophets"
+        }
+      ]
+    }
+  ]
+}
