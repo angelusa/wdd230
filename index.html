@@ -15,17 +15,20 @@
   <link rel="stylesheet" href="styles/larger.css">
   <link rel="icon" href="favicon.ico">
   <title>Ilisapeci Kaboa - WDD230 Web Frontend Development</title>
+  <script src="scripts/links.js" defer></script>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <img src="images/ili.webp" alt="Ilisapeci Kaboa">
-      <span>Ilisapeci Kaboa</span>
+      <div class="header-left">
+        <img src="images/ili.webp" alt="Ilisapeci Kaboa">
+        <span>Ilisapeci Kaboa</span>
+      </div>
       <button id="dark-mode-toggle">🌙 Dark Mode</button>
     </header>
     <nav>
-      <button  id="hamburger">&#9776;</button>
+      <button id="hamburger">☰</button>
       <ul id="nav-menu">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="https://angelusa.github.io/wdd230/chamber/">Chamber</a></li>
@@ -35,37 +38,26 @@
     </nav>
     <main>
       <div class="hero-image-container">
-				<picture>
-					<img src="images/hero-large.webp" alt="Favorite Latter-day Temple" class="hero-image">
-				</picture>
-
-				<div class="hero-text">Oakland Temple</div>
+        <picture>
+          <img src="images/hero-large.webp" alt="Favorite Latte">
+        </picture>
       </div>
-			
-      <h1>WDD 230: Web Frontend Development</h1>
       <section class="card">
         <h2>Learning Activities</h2>
-        <ul>
-          <li><a href="https://codepen.io/angleusa/pen/mdYLgaq" target="_blank">Week 2: Responsive Menu</a></li>
-          <li><a href="https://angelusa.github.io/wdd230/chamber/index.html">Chamber</a></li>
-          <li><a href="week03/images/landscape.webp">Week 03: WebP</a>
-          <li><a href="https://angelusa.github.io/wdd230/week03/lazyload.html">Week 03: Lazy Load</a></li>
-          <li><a href="https://angelusa.github.io/wdd230/week03/bom-copy/index.html">Week 03: Book Of Mormon</a></li>
-          <li><a href="https://codepen.io/angelusa/pen/QWXWBVR">Week 04: Pseudo-Class Fun</a></li>
-          <li><a href="week04/images/css-combinators.webp">Week 04: css combinators</a></li>
-          <li><a href="https://angelusa.github.io/wdd230/week04/tablebuild.html">Week 04: Tables for Data Presentation</a></li>
-          <li><a href ="https://angelusa.github.io/wdd230/Form-start/index.html">Week 04: Form Start</a></li>
-          <li><a href ="https://codepen.io/angelusa/pen/MWMYGVj">Week 05: Pseudo-Elements</a></li>
-          <li><a href ="https://angelusa.github.io/wdd230/week05/new-ward-members.json">Week 05: Json</a></li>
-          <li><a href ="https://angelusa.github.io/wdd230/week05/weather.html">Week 05: Consuming a Weather API</a></li>
-        
-        
-        </section>
-      <section class="card">
-        <h2>Information</h2>
-        <p>Weather information placeholder.</p>
-        <p>Number of visits placeholder.</p>
+        <div class="activities">
+          <!-- The dynamically generated links will be inserted here -->
+        </div>
       </section>
+      <section class="card">
+        <h3>Information</h3>
+        <p><a>Larkspur, CA</a></p>
+        <p>Temperature: <span id="weather-temperature">--</span></p>
+        <p class="img">
+          <img id="weather-icon" src="placeholder.webp" alt="Weather Icon">
+          Description: <span id="weather-description">--</span>
+        </p>
+      </section>
+      <p>Visit Count: <span id="pageVisit">--</span></p>
     </main>
     <div id="map-container">
 			<iframe
@@ -81,5 +73,8 @@
   <script src="scripts/getDates.js"></script>
   <script src="scripts/hamburger.js"></script>
   <script src="scripts/darkMode.js"></script>
-</body>
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/links.js"></script>
+
 </html>
+
