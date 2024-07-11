@@ -1,4 +1,3 @@
-// Create a new file named darkMode.js in your scripts directory
 document.addEventListener('DOMContentLoaded', function() {
   console.log('darkMode.js loaded'); // Add this line to verify the script is loaded
   const darkModeToggle = document.getElementById('dark-mode-toggle');

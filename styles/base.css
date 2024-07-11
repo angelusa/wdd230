@@ -91,6 +91,21 @@ body {
 	max-width: 800px;
 	text-align: center;
   }
+
+
+
+  .dark-mode {
+	background-color: #333;
+	color: #fff;
+  }
+  
+  .dark-mode header,
+  .dark-mode nav,
+  .dark-mode footer {
+	background-color: #444;
+	color: #fff;
+  }
+  
   
   .learning-activities-card {
 	padding: 1rem;
@@ -137,14 +152,12 @@ body {
   }
   
   .activities li {
-	padding: 0.5rem 0;
-	border-bottom: 1px solid #ccc;
+	display: inline;
   }
   
-  .activities li:last-child {
-	border-bottom: none;
+  .activities li:not(:last-child)::after {
+	content: " | ";
   }
-  
   
   
   ul {

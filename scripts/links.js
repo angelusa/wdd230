@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         const linksList = document.createElement('ul');
   
-        week.links.forEach(link => {
+        week.links.forEach((link, index) => {
           const listItem = document.createElement('li');
           const anchor = document.createElement('a');
           anchor.href = link.url;
