@@ -1,40 +1,40 @@
 async function apiFetch() {
   try {
-    const apiKey = "3e12af623e602c597021ee4d65741e25"; // Your OpenWeatherMap API key
-    const town = "Larkspur";
+      const apiKey = "3e12af623e602c597021ee4d65741e25"; // Your OpenWeatherMap API key
+      const town = "Larkspur";
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${apiKey}&units=imperial`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${apiKey}&units=imperial`;
 
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-      displayResults(data);
-    } else {
-      throw Error(await response.text());
-    }
+      const response = await fetch(url);
+      if (response.ok) {
+          const data = await response.json();
+          console.log(data);
+          displayResults(data);
+      } else {
+          throw Error(await response.text());
+      }
   } catch (error) {
-    console.log(error);
+      console.log(error);
   }
 }
 
 async function apiFetchForecast() {
   try {
-    const apiKey = "3e12af623e602c597021ee4d65741e25"; // Your OpenWeatherMap API key
-    const town = "Larkspur";
+      const apiKey = "3e12af623e602c597021ee4d65741e25"; // Your OpenWeatherMap API key
+      const town = "Larkspur";
 
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${town}&appid=${apiKey}&units=imperial`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${town}&appid=${apiKey}&units=imperial`;
 
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-      getThreeDayForecast(data);
-    } else {
-      throw Error(await response.text());
-    }
+      const response = await fetch(url);
+      if (response.ok) {
+          const data = await response.json();
+          console.log(data);
+          getThreeDayForecast(data);
+      } else {
+          throw Error(await response.text());
+      }
   } catch (error) {
-    console.log(error);
+      console.log(error);
   }
 }
 
@@ -57,50 +57,42 @@ function displayResults(weatherData) {
   weatherIcon.setAttribute("alt", desc);
 
   if (captionDesc) { // Check if captionDesc element exists
-    captionDesc.textContent = capitalizeStr(desc);
+      captionDesc.textContent = capitalizeStr(desc);
   }
 
   windChillCalc(weatherData.main.temp, weatherData.wind.speed);
 }
 
 function getThreeDayForecast(weatherData) {
-  // Get today's date
+  const threeDayForecast = [];
   const today = new Date();
-  today.setHours(0, 0, 0, 0); // Set time to midnight
+  let currentDay = today.getDate();
 
-  // Calculate the date for the next two days
-  const tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
-  const dayAfterTomorrow = new Date(today);
-  dayAfterTomorrow.setDate(today.getDate() + 2);
-
-  // Filter forecast data for the next three days
-  const threeDayForecast = weatherData.list.filter(forecast => {
-    const forecastDate = new Date(forecast.dt_txt);
-    forecastDate.setHours(0, 0, 0, 0); // Set time to midnight
-
-    return forecastDate >= today && forecastDate <= dayAfterTomorrow;
-  });
+  for (let i = 0; i < weatherData.list.length; i++) {
+      const forecastDate = new Date(weatherData.list[i].dt_txt);
+      if (forecastDate.getDate() !== currentDay && forecastDate.getHours() === 12) {
+          threeDayForecast.push(weatherData.list[i]);
+          currentDay = forecastDate.getDate();
+          if (threeDayForecast.length === 3) break;
+      }
+  }
 
   populateTable(threeDayForecast);
-  return threeDayForecast;
 }
 
-// Function to populate the table with JSON data
 function populateTable(data) {
-  var tableBody = document.getElementById('showstat').getElementsByTagName('tbody')[0];
+  const tableBody = document.getElementById('showstat').getElementsByTagName('tbody')[0];
   tableBody.innerHTML = ''; // Clear existing rows
 
   data.forEach(function (entry) {
-    if (entry.dt_txt.includes('12:00:00')) {
-      var row = tableBody.insertRow();
+      const row = tableBody.insertRow();
 
-      var dateCell = row.insertCell(0);
-      var tempCell = row.insertCell(1);
-      var feelsLikeCell = row.insertCell(2);
-      var weatherCell = row.insertCell(3);
-      var windSpeedCell = row.insertCell(4);
-      var humidityCell = row.insertCell(5);
+      const dateCell = row.insertCell(0);
+      const tempCell = row.insertCell(1);
+      const feelsLikeCell = row.insertCell(2);
+      const weatherCell = row.insertCell(3);
+      const windSpeedCell = row.insertCell(4);
+      const humidityCell = row.insertCell(5);
 
       const iconUrl = `https://openweathermap.org/img/w/${entry.weather[0].icon}.png`; // Weather icon URL
       const date = new Date(entry.dt_txt).toLocaleDateString('en-US'); // Format date as MM/DD/YYYY
@@ -111,7 +103,6 @@ function populateTable(data) {
       weatherCell.innerHTML = `<img src="${iconUrl}" alt="${entry.weather[0].description}" /> ${entry.weather[0].description}`; // Display weather icon and description
       windSpeedCell.textContent = entry.wind.speed;
       humidityCell.textContent = entry.main.humidity;
-    }
   });
 }
 
@@ -135,9 +126,12 @@ function windChillCalc(temperatureF, windSpeedMph) {
 
   const windChillElement = document.querySelector(".wind-chill");
   if (windChillElement) { // Check if windChillElement exists
-    windChillElement.textContent = windChillF;
+      windChillElement.textContent = windChillF;
   }
 }
 
-apiFetch();
-apiFetchForecast();
+document.addEventListener("DOMContentLoaded", function() {
+  apiFetch();
+  apiFetchForecast();
+});
+
