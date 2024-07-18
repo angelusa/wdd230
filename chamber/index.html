@@ -20,7 +20,10 @@
 </head>
 
 <body>
-   
+    <div id="banner" class="banner" style="display: none;">
+        <span class="close-btn" onclick="closeBanner()">❌</span>
+        <p>Join us for a Chamber of Commerce meet and greet on Wednesday at 7:00 pm!</p>
+    </div>
     <header>
         <div class="header-logo">
             <a href="index.html">
@@ -29,7 +32,6 @@
             <div>
                 <h1>California Chamber of Commerce</h1>
             </div>
-            
         </div>
         <button id="ham-btn"><span>&#9776;</span><span>X</span></button>
 
@@ -48,12 +50,8 @@
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                    </ul>
-                </nav>
-              
             </ul>
         </nav>
-        
     </header>
     <main>
         <div class="main-container" id="index">
@@ -61,7 +59,7 @@
                 <picture>
                     <img src="images/Bridge.webp" alt="hero">
                 </picture>
-               
+                <form action="join.html"><button class="call-to-action" type="submit">Join the Chamber</button></form>
             </div>
 
             <div class="event box">
@@ -74,7 +72,7 @@
                 <div class="top_details">
                     <h3>Weather</h3>
                     <figure>
-                       
+                        <img src="images/office-logo.webp" alt="logo" class="weather-icon">
                         <p><span class="temperature"></span></p> <!-- Temperature displayed here -->
                         <figcaption></figcaption>
                     </figure>
@@ -117,7 +115,7 @@
             </div>
 
             <div class="join box">
-               
+                <button class="join-btn" onclick="window.location.href='../chamber/join.html'">Join Us!</button>
                 <p>Discover how to join the California Chamber of Commerce and how it will benefit your organization!
                 </p>
             </div>
@@ -145,11 +143,10 @@
             Last Updated: <span class="last-modified"></span>
         </div>
     </footer>
-
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/custom.js"></script>
     <script src="scripts/spotlight.js"></script>
-    <script src="scripts/windchill.js"></script>  
-  
-  
-   
+    <script src="scripts/banner.js"></script>
+</body>
 
 </html>
