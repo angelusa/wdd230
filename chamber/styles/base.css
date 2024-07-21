@@ -51,13 +51,14 @@ td {
 
 /* Alternating row colors */
 #memberTable tr:nth-child(even) {
-	background-color: #bed;
-	/* Light grey */
+	background-color: #99bbdd;
+	color: black;
+
 }
 
 #memberTable tr:nth-child(odd) {
-	background-color: #ccc;
-	/* Dark grey */
+	background-color: #999999;
+	color: black;
 }
 
 #index .hero {
@@ -75,7 +76,7 @@ td {
 	text-align: center;
 	text-decoration: none;
 	border: 2px solid #3498db;
-	color: #ffffff;
+	color: white;
 	background-color: transparent;
 	border-radius: 5px;
 	cursor: pointer;
@@ -444,7 +445,7 @@ td {
 	text-align: center;
 	font-size: 1rem;
 	font-weight: bold;
-	color: #000000;
+	color: black;
 	background-color: rgb(159, 161, 31);
 	cursor: pointer;
   }
