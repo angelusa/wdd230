@@ -21,7 +21,7 @@
 }
 
 .main-join .member-benefits thead {
-	background-color: green !important;
+	background-color: #006400 !important;
 	color: white !important;
 }
 .list #members-list {
@@ -75,7 +75,7 @@ td {
 	text-align: center;
 	text-decoration: none;
 	border: 2px solid #3498db;
-	color: #3498db;
+	color: #ffffff;
 	background-color: transparent;
 	border-radius: 5px;
 	cursor: pointer;
@@ -444,7 +444,7 @@ td {
 	text-align: center;
 	font-size: 1rem;
 	font-weight: bold;
-	color: #232323;
+	color: #000000;
 	background-color: rgb(159, 161, 31);
 	cursor: pointer;
   }
