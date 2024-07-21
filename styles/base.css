@@ -3,16 +3,16 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.6;
-	background-color: #f4f4f9;
-	color: #333;
+	background-color: #ffffff;
+	color: #333333;
 	display: flex;
 	justify-content: center;
   }
   
   .container {
-	background-color: white;
+	background-color: #ffffff;
 	padding: 1rem;
-	border: 1px solid #ddd;
+	border: 1px solid #cccccc;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	max-width: 1200px;
 	width: 100%;
@@ -24,8 +24,8 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem;
-	background-color: #4CAF50;
-	color: white;
+	background-color: #004d40; /* Dark teal for better contrast */
+	color: #ffffff;
   }
   
   .header-left {
@@ -48,7 +48,7 @@ body {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	background-color: #333;
+	background-color: #333333;
 	display: none; /* Hide by default */
 	flex-direction: column;
   }
@@ -64,23 +64,23 @@ body {
   nav ul li a {
 	display: block;
 	padding: 1rem;
-	color: white;
+	color: #ffffff;
 	text-align: center;
 	text-decoration: none;
   }
   
   nav ul li a:hover,
   .active {
-	background-color: #555;
+	background-color: #555555; /* Darker hover color */
   }
-
+  
   #hamburger {
 	display: none; /* Hide by default */
 	cursor: pointer;
 	font-size: 1.5rem;
 	background: none;
 	border: none;
-	color: black;
+	color: #333333;
   }
   
   @media (max-width: 768px) {
@@ -112,34 +112,34 @@ body {
   .card {
 	padding: 1rem;
 	background-color: #f9f9f9;
-	border: 1px solid #ddd;
+	border: 1px solid #cccccc;
 	margin-bottom: 1rem;
 	width: 100%;
 	max-width: 800px;
 	text-align: center;
   }
-
-  .card h3{
-	background-color: green;
-	color: white;
+  
+  .card h3 {
+	background-color: #004d40; /* Dark teal for better contrast */
+	color: #ffffff;
   }
-
+  
   .dark-mode {
-	background-color: #333;
-	color: #fff;
+	background-color: #333333;
+	color: #ffffff;
   }
   
   .dark-mode header,
   .dark-mode nav,
   .dark-mode footer {
-	background-color: #444;
-	color: #fff;
+	background-color: #444444;
+	color: #ffffff;
   }
   
   .learning-activities-card {
 	padding: 1rem;
-	background-color: #eef;
-	border: 1px solid #ddd;
+	background-color: #e0f7fa;
+	border: 1px solid #00796b;
 	margin-bottom: 1rem;
 	width: 100%;
 	max-width: 800px;
@@ -150,8 +150,8 @@ body {
   .learning-activities-card h2 {
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
-	color: white;
-	background-color: green;
+	color: #ffffff;
+	background-color: #004d40; /* Dark teal for better contrast */
   }
   
   .activities-container {
@@ -197,9 +197,9 @@ body {
   
   footer {
 	padding: 1rem;
-	background-color: #4CAF50;
+	background-color: #004d40; /* Dark teal for better contrast */
 	text-align: center;
-	color: white;
+	color: #ffffff;
   }
   
   footer p {
@@ -241,7 +241,7 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	color: white;
+	color: #ffffff;
 	font-size: 24px;
 	font-weight: bold;
 	z-index: 1;
@@ -353,7 +353,7 @@ body {
 	  left: 35%; /* Change this to push the text to the left */
 	  transform: translate(-50%, -50%);
 	  text-align: left;
-	  color: black;
+	  color: #333333;
 	  font-size: 15px;
 	  font-weight: bold;
 	}
@@ -385,18 +385,18 @@ body {
   }
   
   .hero-content {
-	color: #fff;
+	color: #ffffff;
 	text-align: center;
   }
   
   .hero-content h1 {
 	font-size: 50px;
-	text-shadow: 2px 2px 10px #000;
+	text-shadow: 2px 2px 10px #000000;
   }
   
   .hero-content p {
 	font-size: 24px;
-	text-shadow: 2px 2px 10px #000;
+	text-shadow: 2px 2px 10px #000000;
   }
   
   .hero-image {
@@ -409,11 +409,25 @@ body {
   .hero-text {
 	position: absolute;
 	margin-top: 2%;
-	left: 27%;
-	transform: translate(-50%, -50%);
+	left: 27;
+	transform: translate();
 	text-align: left;
 	color: black;
 	font-size: 24px;
 	font-weight: bold;
 	z-index: 1;
   }
+  
+  /* Styling for JSON members display */
+  .members-container {
+	background-color: #e0f7fa; /* Light cyan background */
+	border: 1px solid #00796b; /* Dark teal border */
+	color: #004d40; /* Dark teal text */
+	padding: 1rem;
+	margin: 1rem 0;
+  }
+  
+  .members-container h3 {
+	color: #004d40; /* Dark teal heading */
+  }
+  
