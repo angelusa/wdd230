@@ -6,7 +6,7 @@
 	margin: 0 auto;
 	padding: 20px;
 	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
 }
 
 .main-join {
@@ -75,8 +75,8 @@ td {
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
-	border: 2px solid #3498db;
-	color: white;
+	border: 2px solid green;
+	color: black;
 	background-color: transparent;
 	border-radius: 5px;
 	cursor: pointer;
@@ -250,8 +250,8 @@ td {
 	justify-items: center;
 	margin: 0 auto;
 	/* max-width: 1024px; */
-	color: whitesmoke;
-	background-color: var(--primary-dark-color);
+	color: black;
+	background-color: lightgrey;
 	/* border: 1px solid rgba(255, 255, 255, 0.3); */
 	text-align: center;
 	font-size: 0.8em;  
@@ -310,7 +310,7 @@ td {
 	cursor: pointer;
 	font-size: clamp(1.1rem, 3.25vw, 1.5rem);
 	margin: 4px;
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	border: 1px solid rgba(255, 255, 77);
 	padding: 4px;
 	background-color: #FFFFFF;
 	color: black;
@@ -321,7 +321,7 @@ td {
 	font-size: 1.3em;
 	margin: 4px;
 	padding: 4px;
-	color: whitesmoke;
+	color: black;
 	font-family: 'Ubuntu', sans-serif;
 	text-align: center;
   }
@@ -436,6 +436,7 @@ td {
 	text-align: center;
 	font-size: 0.9rem;
 	font-family: 'Ubuntu', sans-serif;
+	
   }
   
   .join-btn {
@@ -601,8 +602,8 @@ td {
   footer {
 	margin: 0.5rem auto 0;
 	/* max-width: 1024px; */
-	color: white;
-	background-color: var(--primary-dark-color);
+	color: black;
+	background-color: lightgray;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	text-align: center;
 	
@@ -652,8 +653,8 @@ td {
   .web-info {
 	margin-top: 1rem;
 	padding: 8px;
-	background-color: var(--primary-dark-color);
-	color: #FFFFFF;
+	background-color: lightgray;
+	color: black;
   }
   
   .visits {
@@ -949,12 +950,12 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    background-color: burlywood;
+    color: black;
 }
 
 .view-buttons button:hover {
-    background-color: #0056b3;
+    background-color: burlywood;
 }
 
 /* Directory Styles */
