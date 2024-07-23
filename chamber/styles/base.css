@@ -377,6 +377,10 @@ td {
   .open {
 	display: inline-block;
   }
+
+  nav ul li {
+	display: inline-block;
+  }
   
   nav ul li a {
   display: block;
@@ -1339,3 +1343,5 @@ body {
   
     
     }
+
+	
