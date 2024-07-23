@@ -1,5 +1,7 @@
+// scripts/visits.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Visit message logic
     var visitMessage = document.getElementById('visit-message');
     var lastVisit = localStorage.getItem('lastVisit');
     var currentVisit = Date.now();
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Days Difference:', daysDiff);
 
         if (daysDiff < 1) {
-            visitMessage.textContent = 'Back so soon! Awesome!  ' + currentDate;
+            visitMessage.textContent = 'Back so soon! Awesome! ' + currentDate;
         } else if (daysDiff === 1) {
             visitMessage.textContent = 'You last visited 1 day ago on ' + lastVisitDate + '. Today\'s date is ' + currentDate;
         } else {
@@ -28,4 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     localStorage.setItem('lastVisit', currentVisit);
+
+    // Display last modified date
+    const lastModifiedSpan = document.querySelector('.last-modified');
+    lastModifiedSpan.textContent = document.lastModified;
+
+    // Display current year
+    const currentYearSpan = document.querySelector('.current-year');
+    currentYearSpan.textContent = new Date().getFullYear();
 });
