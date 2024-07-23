@@ -4,6 +4,7 @@ body {
     color: black;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #color-schema h2 p {
@@ -14,6 +15,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 header {
@@ -31,41 +34,6 @@ h1 {
 h2 {
     font-family: 'Arial', sans-serif;
     color: black;
-}
-
-nav {
-    padding: 0.5em 0;
-    background-color: #6b818c; /* Add a background color to match your design */
-}
-
-.horizontal-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between; /* Adjust space between items */
-}
-
-.horizontal-nav li {
-    flex: 1; /* Each item takes up equal space */
-    text-align: center; /* Center text within each item */
-}
-
-.horizontal-nav li a {
-    text-decoration: none;
-    color: #FFFFFF;
-    padding: 0.5em 1em;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.horizontal-nav li a:hover {
-    background-color: #555555;
-}
-
-.horizontal-nav .active a {
-    background-color: #555555;
-    font-weight: bold;
 }
 
 main {
@@ -88,6 +56,7 @@ footer {
     width: 100%;
 }
 
+/* Additional CSS based on the wireframe */
 #wireframe img {
     max-width: 100%;
     height: auto;
@@ -123,4 +92,53 @@ footer {
     #wireframe {
         flex: 1 1 100%;
     }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    main {
+        padding: 1em 0;
+    }
+
+    section {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .mobile-wireframe {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+/* Ensure images don't overflow their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Additional rule to ensure no horizontal scrolling */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
