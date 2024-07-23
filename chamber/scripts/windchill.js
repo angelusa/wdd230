@@ -130,8 +130,18 @@ function windChillCalc(temperatureF, windSpeedMph) {
   }
 }
 
+function updateLastModified() {
+  const lastModifiedElement = document.querySelector(".last-modified");
+  if (lastModifiedElement) {
+      const lastModified = new Date(document.lastModified);
+      lastModifiedElement.textContent = lastModified.toLocaleString();
+  } else {
+      console.error('Last modified element not found.');
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   apiFetch();
   apiFetchForecast();
+  updateLastModified();
 });
-

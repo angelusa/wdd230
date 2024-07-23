@@ -63,14 +63,14 @@
             </div>
 
             <div class="event box">
-                <h3>Grand Opening</h3>
+                <h2>Grand Opening</h2>
                 <img src="images/office-buildings-svgrepo-com.webp" alt="Marketing Logo" height="80">
                 <p>Join us for the grand opening of the City Center Building new Office Space, Tuesday at 2 p.m.</p>
             </div>
 
             <div class="weather_section box">
                 <div class="top_details">
-                    <h3>Weather</h3>
+                    <h2>Weather</h2>
                     <figure>
                         <img src="images/office-logo.webp" alt="logo" class="weather-icon">
                         <p><span class="temperature"></span></p> <!-- Temperature displayed here -->
@@ -82,44 +82,31 @@
                     Wind Chill: <span class="wind-chill"></span>
                 </div>
                 <div class="scroller">
-                    <h4>Forecasts</h4>
+                    <h3>Forecasts</h3>
                     <table id="showstat">
                         <thead>
                             <tr>
                                 <th>Date</th>
-                                <th>Temp(°C)</th>
-                                <th>Feel(°C)</th>
+                                <th>Temp(°F)</th>
+                                <th>Feel(°F)</th>
                                 <th>Description</th>
-                                <th>Wind Speed(m/s)</th>
+                                <th>Wind Speed(mph)</th>
                                 <th>Humidity (%)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>April 8</td>
-                                <td>20°C</td>
-                                <td>18°C</td>
-                                <td>
-                                    <div class="weather-details">
-                                        <img src="weather_icons/sunny.png" alt="Sunny">
-                                        <span>Description of the weather on April 8.</span>
-                                    </div>
-                                </td>
-                                <td>5 m/s</td>
-                                <td>70%</td>
-                            </tr>
-                            <!-- Add more rows as needed -->
+                            <!-- Rows will be populated here by JavaScript -->
                         </tbody>
                     </table>
                 </div>
             </div>
 
             <div class="join box">
-                <button class="join-btn" onclick="window.location.href='../chamber/join.html'">Join Us!</button>
+                <button class="join-btn" onclick="window.location.href='join.html'">Join Us!</button>
                 <p>Discover how to join the California Chamber of Commerce and how it will benefit your organization!</p>
             </div>
             <div class="news box">
-                <h3>News Release</h3>
+                <h2>News Release</h2>
                 <p>
                     February 29 - LeBron James closing in on 40,000 career points: Will anyone else ever score that
                     many?
@@ -143,7 +130,6 @@
         </div>
     </footer>
     <script src="scripts/windchill.js"></script>
-    <script src="scripts/custom.js"></script>
     <script src="scripts/spotlight.js"></script>
     <script src="scripts/banner.js"></script>
 </body>
