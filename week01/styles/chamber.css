@@ -5,9 +5,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
 #color-schema h2 p {
     color: black;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,17 +27,54 @@ h1 {
     font-family: 'Arial', sans-serif;
     color: white;
 }
+
 h2 {
     font-family: 'Arial', sans-serif;
     color: black;
 }
+
+nav {
+    padding: 0.5em 0;
+    background-color: #6b818c; /* Add a background color to match your design */
+}
+
+.horizontal-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Adjust space between items */
+}
+
+.horizontal-nav li {
+    flex: 1; /* Each item takes up equal space */
+    text-align: center; /* Center text within each item */
+}
+
+.horizontal-nav li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.horizontal-nav li a:hover {
+    background-color: #555555;
+}
+
+.horizontal-nav .active a {
+    background-color: #555555;
+    font-weight: bold;
+}
+
 main {
     padding: 1em;
 }
 
 section {
     margin-bottom: 2em;
-    padding: 1em; /* Add padding to each section */
+    padding: 1em;
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -49,7 +88,6 @@ footer {
     width: 100%;
 }
 
-/* Additional CSS based on the wireframe */
 #wireframe img {
     max-width: 100%;
     height: auto;
@@ -58,8 +96,8 @@ footer {
 }
 
 .mobile-wireframe {
-    width: 375px; /* Typical mobile width */
-    height: 667px; /* Typical mobile height */
+    width: 375px;
+    height: 667px;
     border: 1px solid #000;
     overflow: hidden;
     margin: 0 auto;
@@ -86,4 +124,3 @@ footer {
         flex: 1 1 100%;
     }
 }
-
