@@ -60,4 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Redirect to the thank you page
         window.location.href = thankyouURL;
     });
-});
+})
+
+
+     
