@@ -1,11 +1,13 @@
 body {
     font-family: 'Georgia', serif;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 0;
 }
-
+#color-schema h2 p {
+    color: black;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -13,17 +15,20 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #3d3d3d;
     color: #FFFFFF;
     padding: 1em;
     text-align: center;
 }
 
-h1, h2 {
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+h2 {
     font-family: 'Arial', sans-serif;
     color: black;
 }
-
 main {
     padding: 1em;
 }
@@ -31,13 +36,13 @@ main {
 section {
     margin-bottom: 2em;
     padding: 1em; /* Add padding to each section */
-    border: 1px solid #4CAF50;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
 footer {
-    background-color: #4CAF50;
-    color: #FFFFFF;
+    background-color: #3d3d3d;
+    color: white;
     text-align: center;
     padding: 1em;
     position: relative;
