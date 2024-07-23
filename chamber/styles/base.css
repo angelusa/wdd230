@@ -180,7 +180,7 @@ td {
 	--secondary-dark-color: #6B818C;
 	--accent-dark-color-1: #465281;
 	--accent-dark-color-2: #131314;
-	--light-text-color: #DDDAE9;
+	--light-text-color: black;
 	--dark-text-color: #FFFFFF;
   
 	--header-font: 'Ubuntu', sans-serif;
@@ -1261,6 +1261,7 @@ section.demographics {
 	background-color: rgba(177, 117, 107, 0.7);
 	text-align: center;
 	margin-left: 26%;
+
 }
 
 /* Responsive layout for smaller screens */

@@ -1,5 +1,3 @@
-// scripts/visits.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Visit message logic (only for discovery.html)
     if (document.getElementById('visit-message')) {
@@ -45,4 +43,3 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 });
-
