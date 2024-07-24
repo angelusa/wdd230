@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     // Visit message logic (only for discovery.html)
     if (document.getElementById('visit-message')) {
