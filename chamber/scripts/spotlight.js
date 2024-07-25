@@ -5,7 +5,7 @@ const companies = [
     phone: "+1 (213) 555-7890",
     email: "info@logistics-transport.com",
     url: "https://logistics-transport.com",
-    img: "images/transport2.webp", // Corrected image path
+    img: "images/transport2.webp",
     slogan: "Making moving easier in America",
     membership: "gold",
   },
@@ -15,7 +15,7 @@ const companies = [
     phone: "+1 (415) 555-1234",
     email: "info@legal-services.com",
     url: "https://legal-services.com",
-    img: "images/lawyer-logo.webp", // Corrected image path
+    img: "images/lawyer-logo.webp",
     slogan: "Top-rated, go-to law firm in America",
     membership: "silver",
   },
@@ -25,7 +25,7 @@ const companies = [
     phone: "+1 (916) 555-6789",
     email: "info@marketing-consulting.com",
     url: "https://marketing-consulting.com",
-    img: "images/mkt-logo.webp", // Corrected image path
+    img: "images/mkt-logo.webp",
     slogan: "Building your brand’s voice in America",
     membership: "silver",
   },
@@ -35,7 +35,7 @@ const companies = [
     phone: "+1 (619) 555-4321",
     email: "info@tech-innovations.com",
     url: "https://tech-innovations.com",
-    img: "images/Tech Innovation.webp", // Corrected image path
+    img: "images/Tech Innovation.webp",
     slogan: "Pioneering technology solutions in America",
     membership: "gold",
   },
@@ -45,7 +45,7 @@ const companies = [
     phone: "+1 (650) 555-9876",
     email: "info@financial-advisors.com",
     url: "https://financial-advisors.com",
-    img: "images/icons8-financial-advisor-64.webp", // Corrected image path
+    img: "images/icons8-financial-advisor-64.webp",
     slogan: "Guiding your financial future in America",
     membership: "gold",
   },
@@ -55,7 +55,7 @@ const companies = [
     phone: "+1 (831) 555-2468",
     email: "info@creative-agency.com",
     url: "https://creative-agency.com",
-    img: "images/creative company.webp", // Corrected image path
+    img: "images/creative company.webp",
     slogan: "Inspiring creativity in America",
     membership: "silver",
   },
@@ -106,6 +106,14 @@ function displaySpotlight(company) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-populateSpotlightCompanies();
-displaySpotlightCompanies();
+  populateSpotlightCompanies();
+  displaySpotlightCompanies();
+
+  // Hamburger menu functionality
+  const hamBtn = document.getElementById('ham-btn');
+  const primaryNav = document.getElementById('primary-nav');
+
+  hamBtn.addEventListener('click', function() {
+    primaryNav.classList.toggle('show');
+  });
 });
