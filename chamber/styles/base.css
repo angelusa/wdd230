@@ -97,7 +97,6 @@ td {
 
 
 
-
 .weather_section {
 	background-color: rgb(152, 111, 114);
 	max-height: 250px;
@@ -175,14 +174,6 @@ td {
         display: none;
     }
 }
-
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 960px) {
@@ -470,13 +461,17 @@ main {
 	background-color: lightgray;
 }
 
-.box h2, p {
+.box, h2 p {
 	margin: 0em;
 	text-align: center;
-	font-size: 0.9rem;
+	font-size: 0.7rem;
 	padding: 0.5rem;
 	font-family: 'Ubuntu', sans-serif;
+
 	
+}
+.box, h2{
+	font-weight: bold;
 }
 
 .join-btn {
@@ -577,11 +572,14 @@ main {
 .weather figure p {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
+
 }
 
 .weather figcaption {
 	grid-column: 1/3;
 }
+
+
 
 .news p {
 	margin: .5em 0;
@@ -1379,3 +1377,8 @@ section.demographics {
 		width: 100%;
 	}
 }
+
+.weather_section.box h2 {
+    font-weight: bold !important;
+}
+
