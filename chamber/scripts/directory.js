@@ -1,10 +1,10 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const directory = document.getElementById('directory');
     const gridViewButton = document.getElementById('gridView');
     const listViewButton = document.getElementById('listView');
     const listContainer = document.getElementById('list-container');
     const membersList = document.getElementById('members-list');
-
     // Fetch the JSON data
     fetch('data/members.json')  // Ensure this path is correct relative to your HTML file
         .then(response => response.json())
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayMembersInList(data.companies);
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
-
+    
     // Function to display members in grid view
     function displayMembersInGrid(members) {
         directory.innerHTML = '';
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             directory.appendChild(memberDiv);
         });
     }
-
+    
     // Function to display members in list view
     function displayMembersInList(members) {
         membersList.innerHTML = '';
@@ -49,16 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
             membersList.appendChild(memberRow);
         });
     }
-
+    
     // Event listeners for view toggle
     gridViewButton.addEventListener('click', () => {
         directory.classList.remove('hidden');
         listContainer.classList.add('hidden');
         directory.classList.add('grid-view');
     });
-
+    
     listViewButton.addEventListener('click', () => {
         directory.classList.add('hidden');
         listContainer.classList.remove('hidden');
     });
-});
+    });
