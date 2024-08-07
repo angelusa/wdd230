@@ -341,7 +341,7 @@ body {
 	}
   
 	.hero-text {
-	  top: 10%;
+	  top: 30%;
 	  left: 30%;
 	  font-size: 19px;
 	}
@@ -349,7 +349,7 @@ body {
   
   @media screen and (max-width: 1100px) {
 	.hero-text {
-	  margin-top: -20%; /* Adjust this value as needed */
+	  margin-top: 30%; /* Adjust this value as needed */
 	  left: 35%; /* Change this to push the text to the left */
 	  transform: translate(-50%, -50%);
 	  text-align: left;
