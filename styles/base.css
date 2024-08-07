@@ -363,7 +363,7 @@ body {
 		  position: absolute;
 		  top: -25%;
 		  left: 15%; /* Aligns the text to the far left */
-		  font-size: 20px; /* Adjust as needed for mobile view */
+		  font-size: 15px; /* Adjust as needed for mobile view */
 		  color: black;
 		  font-weight: bold;
 		  z-index: 1;
